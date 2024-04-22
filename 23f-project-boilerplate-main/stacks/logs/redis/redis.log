@@ -1,0 +1,99 @@
+1780:C 22 Apr 2024 04:24:34.052 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1780:C 22 Apr 2024 04:24:34.052 # Redis version=5.0.7, bits=64, commit=00000000, modified=0, pid=1780, just started
+1780:C 22 Apr 2024 04:24:34.052 # Configuration loaded
+1780:M 22 Apr 2024 04:24:34.060 * Running mode=standalone, port=6379.
+1780:M 22 Apr 2024 04:24:34.060 # Server initialized
+1780:M 22 Apr 2024 04:24:34.060 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1780:M 22 Apr 2024 04:24:34.062 * Ready to accept connections
+1780:M 22 Apr 2024 04:25:21.044 * 1 changes in 15 seconds. Saving...
+1780:M 22 Apr 2024 04:25:21.068 * Background saving started by pid 2127
+2127:C 22 Apr 2024 04:25:21.080 * DB saved on disk
+2127:C 22 Apr 2024 04:25:21.083 * RDB: 0 MB of memory used by copy-on-write
+1780:M 22 Apr 2024 04:25:21.170 * Background saving terminated with success
+1530:C 22 Apr 2024 04:34:48.745 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1530:C 22 Apr 2024 04:34:48.745 # Redis version=5.0.7, bits=64, commit=00000000, modified=0, pid=1530, just started
+1530:C 22 Apr 2024 04:34:48.745 # Configuration loaded
+1530:M 22 Apr 2024 04:34:48.752 * Running mode=standalone, port=6379.
+1530:M 22 Apr 2024 04:34:48.752 # Server initialized
+1530:M 22 Apr 2024 04:34:48.752 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1530:M 22 Apr 2024 04:34:48.753 * DB loaded from disk: 0.002 seconds
+1530:M 22 Apr 2024 04:34:48.753 * Ready to accept connections
+1530:signal-handler (1713760518) Received SIGTERM scheduling shutdown...
+1530:M 22 Apr 2024 04:35:18.610 # User requested shutdown...
+1530:M 22 Apr 2024 04:35:18.610 * Saving the final RDB snapshot before exiting.
+1530:M 22 Apr 2024 04:35:18.612 * DB saved on disk
+1530:M 22 Apr 2024 04:35:18.612 # Redis is now ready to exit, bye bye...
+1513:C 22 Apr 2024 04:58:38.635 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1513:C 22 Apr 2024 04:58:38.635 # Redis version=5.0.7, bits=64, commit=00000000, modified=0, pid=1513, just started
+1513:C 22 Apr 2024 04:58:38.635 # Configuration loaded
+1513:M 22 Apr 2024 04:58:38.648 * Running mode=standalone, port=6379.
+1513:M 22 Apr 2024 04:58:38.648 # Server initialized
+1513:M 22 Apr 2024 04:58:38.648 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1513:M 22 Apr 2024 04:58:38.649 * DB loaded from disk: 0.001 seconds
+1513:M 22 Apr 2024 04:58:38.649 * Ready to accept connections
+1513:signal-handler (1713767454) Received SIGTERM scheduling shutdown...
+1513:M 22 Apr 2024 06:30:54.809 # User requested shutdown...
+1513:M 22 Apr 2024 06:30:54.809 * Saving the final RDB snapshot before exiting.
+1513:M 22 Apr 2024 06:30:54.812 * DB saved on disk
+1513:M 22 Apr 2024 06:30:54.812 # Redis is now ready to exit, bye bye...
+1510:C 22 Apr 2024 06:30:58.404 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1510:C 22 Apr 2024 06:30:58.404 # Redis version=5.0.7, bits=64, commit=00000000, modified=0, pid=1510, just started
+1510:C 22 Apr 2024 06:30:58.404 # Configuration loaded
+1510:M 22 Apr 2024 06:30:58.406 * Running mode=standalone, port=6379.
+1510:M 22 Apr 2024 06:30:58.406 # Server initialized
+1510:M 22 Apr 2024 06:30:58.406 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1510:M 22 Apr 2024 06:30:58.408 * DB loaded from disk: 0.001 seconds
+1510:M 22 Apr 2024 06:30:58.408 * Ready to accept connections
+1530:C 22 Apr 2024 06:32:58.293 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1530:C 22 Apr 2024 06:32:58.293 # Redis version=5.0.7, bits=64, commit=00000000, modified=0, pid=1530, just started
+1530:C 22 Apr 2024 06:32:58.293 # Configuration loaded
+1530:M 22 Apr 2024 06:32:58.299 * Running mode=standalone, port=6379.
+1530:M 22 Apr 2024 06:32:58.299 # Server initialized
+1530:M 22 Apr 2024 06:32:58.299 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1530:M 22 Apr 2024 06:32:58.301 * DB loaded from disk: 0.002 seconds
+1530:M 22 Apr 2024 06:32:58.301 * Ready to accept connections
+1530:M 22 Apr 2024 06:33:31.689 * 1 changes in 15 seconds. Saving...
+1530:M 22 Apr 2024 06:33:31.690 * Background saving started by pid 1846
+1846:C 22 Apr 2024 06:33:31.693 * DB saved on disk
+1846:C 22 Apr 2024 06:33:31.693 * RDB: 0 MB of memory used by copy-on-write
+1530:M 22 Apr 2024 06:33:31.791 * Background saving terminated with success
+1530:M 22 Apr 2024 06:33:47.069 * 1 changes in 15 seconds. Saving...
+1530:M 22 Apr 2024 06:33:47.074 * Background saving started by pid 1861
+1861:C 22 Apr 2024 06:33:47.081 * DB saved on disk
+1861:C 22 Apr 2024 06:33:47.082 * RDB: 0 MB of memory used by copy-on-write
+1530:M 22 Apr 2024 06:33:47.177 * Background saving terminated with success
+1530:M 22 Apr 2024 11:00:47.678 * 1 changes in 15 seconds. Saving...
+1530:M 22 Apr 2024 11:00:47.679 * Background saving started by pid 3166
+3166:C 22 Apr 2024 11:00:47.680 * DB saved on disk
+3166:C 22 Apr 2024 11:00:47.681 * RDB: 0 MB of memory used by copy-on-write
+1530:M 22 Apr 2024 11:00:47.780 * Background saving terminated with success
+1530:M 22 Apr 2024 11:01:03.037 * 1 changes in 15 seconds. Saving...
+1530:M 22 Apr 2024 11:01:03.038 * Background saving started by pid 3178
+3178:C 22 Apr 2024 11:01:03.042 * DB saved on disk
+3178:C 22 Apr 2024 11:01:03.044 * RDB: 0 MB of memory used by copy-on-write
+1530:M 22 Apr 2024 11:01:03.139 * Background saving terminated with success
+1530:M 22 Apr 2024 13:51:18.382 * 1 changes in 15 seconds. Saving...
+1530:M 22 Apr 2024 13:51:18.382 * Background saving started by pid 8391
+8391:C 22 Apr 2024 13:51:18.384 * DB saved on disk
+8391:C 22 Apr 2024 13:51:18.384 * RDB: 0 MB of memory used by copy-on-write
+1530:M 22 Apr 2024 13:51:18.486 * Background saving terminated with success
+1530:M 22 Apr 2024 14:08:24.279 * 1 changes in 15 seconds. Saving...
+1530:M 22 Apr 2024 14:08:24.280 * Background saving started by pid 8403
+8403:C 22 Apr 2024 14:08:24.283 * DB saved on disk
+8403:C 22 Apr 2024 14:08:24.284 * RDB: 0 MB of memory used by copy-on-write
+1530:M 22 Apr 2024 14:08:24.385 * Background saving terminated with success
+1530:M 22 Apr 2024 17:03:17.383 * 1 changes in 15 seconds. Saving...
+1530:M 22 Apr 2024 17:03:17.383 * Background saving started by pid 9703
+9703:C 22 Apr 2024 17:03:17.385 * DB saved on disk
+9703:C 22 Apr 2024 17:03:17.385 * RDB: 0 MB of memory used by copy-on-write
+1530:M 22 Apr 2024 17:03:17.484 * Background saving terminated with success
+1530:M 22 Apr 2024 17:03:33.003 * 1 changes in 15 seconds. Saving...
+1530:M 22 Apr 2024 17:03:33.004 * Background saving started by pid 9715
+9715:C 22 Apr 2024 17:03:33.009 * DB saved on disk
+9715:C 22 Apr 2024 17:03:33.010 * RDB: 0 MB of memory used by copy-on-write
+1530:M 22 Apr 2024 17:03:33.110 * Background saving terminated with success
+1530:signal-handler (1713808263) Received SIGTERM scheduling shutdown...
+1530:M 22 Apr 2024 17:51:03.852 # User requested shutdown...
+1530:M 22 Apr 2024 17:51:03.852 * Saving the final RDB snapshot before exiting.
+1530:M 22 Apr 2024 17:51:03.859 * DB saved on disk
+1530:M 22 Apr 2024 17:51:03.859 # Redis is now ready to exit, bye bye...
