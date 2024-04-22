@@ -17,17 +17,3 @@ flush privileges;
 -- TODO: If you changed the name of the database above, you need to
 -- change it here too. 
 use cool_db;
-
--- Put your DDL 
-CREATE TABLE fav_colors (
-  name VARCHAR(20),
-  color VARCHAR(10)
-);
-
--- Add sample data. 
-INSERT INTO fav_colors
-  (name, color)
-VALUES
-  ('dev', 'blue'),
-  ('pro', 'yellow'),
-  ('junior', 'red');
