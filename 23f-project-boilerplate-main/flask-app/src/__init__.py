@@ -40,6 +40,9 @@ def create_app():
     # and give a url prefix to each
     app.register_blueprint(customers,   url_prefix='/c')
     app.register_blueprint(products,    url_prefix='/p')
+    app.register_blueprint(applicants,    url_prefix='/s')
+    app.register_blueprint(application,    url_prefix='/a')
+    app.register_blueprint(guidanceCounsellor,    url_prefix='/g')
 
     # Don't forget to return the app object
     return app

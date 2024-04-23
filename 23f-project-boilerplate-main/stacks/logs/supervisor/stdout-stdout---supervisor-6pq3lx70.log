@@ -1,0 +1,1712 @@
+READY
+RESULT 834
+processname:redis groupname:redis pid:1511 channel:stdout
+1511:C 23 Apr 2024 02:03:10.253 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1511:C 23 Apr 2024 02:03:10.253 # Redis version=5.0.7, bits=64, commit=00000000, modified=0, pid=1511, just started
+1511:C 23 Apr 2024 02:03:10.253 # Configuration loaded
+1511:M 23 Apr 2024 02:03:10.270 * Running mode=standalone, port=6379.
+1511:M 23 Apr 2024 02:03:10.270 # Server initialized
+1511:M 23 Apr 2024 02:03:10.270 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+READY
+RESULT 85
+processname:rts groupname:rts pid:1513 channel:stdout
+Load environment configuration
+READY
+RESULT 93
+processname:backend groupname:backend pid:1514 channel:stdout
+Load environment configuration
+READY
+RESULT 91
+processname:editor groupname:editor pid:1516 channel:stdout
+Load environment configuration
+READY
+RESULT 189
+processname:redis groupname:redis pid:1511 channel:stdout
+1511:M 23 Apr 2024 02:03:10.272 * DB loaded from disk: 0.002 seconds
+1511:M 23 Apr 2024 02:03:10.272 * Ready to accept connections
+READY
+RESULT 91
+processname:backend groupname:backend pid:1514 channel:stdout
+Waiting for RTS to start ...
+READY
+RESULT 252
+processname:postgres groupname:postgres pid:1519 channel:stdout
+2024-04-23 02:03:10.438 UTC [1519] LOG:  starting PostgreSQL 13.14 (Ubuntu 13.14-1.pgdg20.04+1) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit
+READY
+RESULT 154
+processname:postgres groupname:postgres pid:1519 channel:stdout
+2024-04-23 02:03:10.438 UTC [1519] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+READY
+RESULT 92
+processname:editor groupname:editor pid:1516 channel:stdout
+/tmp/appsmith/www /opt/appsmith
+READY
+RESULT 74
+processname:editor groupname:editor pid:1516 channel:stdout
+/opt/appsmith
+READY
+RESULT 171
+processname:postgres groupname:postgres pid:1519 channel:stdout
+2024-04-23 02:03:10.446 UTC [1519] LOG:  listening on Unix socket "/tmp/appsmith/pg-runtime/.s.PGSQL.5432"
+READY
+RESULT 162
+processname:postgres groupname:postgres pid:1519 channel:stdout
+2024-04-23 02:03:10.473 UTC [1576] LOG:  database system was shut down at 2024-04-22 17:50:52 UTC
+READY
+RESULT 197
+processname:editor groupname:editor pid:1516 channel:stderr
+{"level":"info","ts":1713837790.478012,"msg":"using provided configuration","config_file":"/tmp/appsmith/Caddyfile","config_adapter":""}
+READY
+RESULT 152
+processname:postgres groupname:postgres pid:1519 channel:stdout
+2024-04-23 02:03:10.505 UTC [1519] LOG:  database system is ready to accept connections
+READY
+RESULT 197
+processname:editor groupname:editor pid:1516 channel:stderr
+{"level":"info","ts":1713837790.541947,"msg":"using provided configuration","config_file":"/tmp/appsmith/Caddyfile","config_adapter":""}
+READY
+RESULT 264
+processname:editor groupname:editor pid:1516 channel:stderr
+{"level":"info","ts":1713837790.5510404,"logger":"admin","msg":"admin endpoint started","address":"127.0.0.1:2019","enforce_origin":false,"origins":["//localhost:2019","//[::1]:2019","//127.0.0.1:2019"]}
+READY
+RESULT 268
+processname:editor groupname:editor pid:1516 channel:stderr
+{"level":"warn","ts":1713837790.5520368,"logger":"http.auto_https","msg":"server is listening only on the HTTP port, so no automatic HTTPS will be applied to this server","server_name":"srv0","http_port":80}
+READY
+RESULT 208
+processname:editor groupname:editor pid:1516 channel:stderr
+{"level":"info","ts":1713837790.5522668,"logger":"tls.cache.maintenance","msg":"started background certificate maintenance","cache":"0x400033be00"}
+READY
+RESULT 266
+processname:editor groupname:editor pid:1516 channel:stderr
+{"level":"info","ts":1713837790.5550263,"logger":"http.log","msg":"server running","name":"srv0","protocols":["h1","h2","h3"]}
+{"level":"info","ts":1713837790.5550466,"msg":"serving initial configuration"}
+READY
+RESULT 345
+processname:editor groupname:editor pid:1516 channel:stderr
+{"level":"warn","ts":1713837790.5651069,"logger":"tls","msg":"storage cleaning happened too recently; skipping for now","storage":"FileStorage:/appsmith-stacks/data/caddy","instance":"5d4bdeb9-47f0-4dc7-99cc-ef6b5f30dd93","try_again":1713924190.5651045,"try_again_in":86399.999999458}
+READY
+RESULT 156
+processname:editor groupname:editor pid:1516 channel:stderr
+{"level":"info","ts":1713837790.5657136,"logger":"tls","msg":"finished cleaning storage units"}
+READY
+RESULT 322
+processname:mongodb groupname:mongodb pid:1512 channel:stdout
+{"t":{"$date":"2024-04-23T02:03:11.200Z"},"s":"I",  "c":"CONTROL",  "id":20697,   "ctx":"-","msg":"Renamed existing log file","attr":{"oldLogPath":"/appsmith-stacks/logs/mongodb/db.log","newLogPath":"/appsmith-stacks/logs/mongodb/db.log.2024-04-23T02-03-11"}}
+READY
+RESULT 105
+processname:rts groupname:rts pid:1513 channel:stdout
+RTS version v1.21 running at http://localhost:8091
+READY
+RESULT 78
+processname:backend groupname:backend pid:1514 channel:stdout
+{"success":true}READY
+RESULT 75
+processname:backend groupname:backend pid:1514 channel:stdout
+RTS started.
+READY
+RESULT 356
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: Class path contains multiple SLF4J providers.
+SLF4J: Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@6659c656]
+SLF4J: Found provider [org.slf4j.reload4j.Reload4jServiceProvider@6d5380c2]
+SLF4J: See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+READY
+RESULT 157
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: Actual provider is of type [ch.qos.logback.classic.spi.LogbackServiceProvider@6659c656]
+READY
+RESULT 233
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:13,158]  - Starting ServerApplication vv1.21 using Java 17.0.9 with PID 1514 (/opt/appsmith/backend/server.jar started by root in /opt/appsmith/backend)
+READY
+RESULT 216
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:13,166]  - Running with Spring Boot v3.0.9, Spring v6.0.11
+[2024-04-23 02:03:13,168]  - The following 1 profile is active: "production"
+READY
+RESULT 173
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:15,306]  - Multiple Spring Data modules found, entering strict repository configuration mode
+READY
+RESULT 164
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:15,306]  - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+READY
+RESULT 192
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:15,608]  - Finished Spring Data repository scanning in 296 ms. Found 44 Reactive MongoDB repository interfaces.
+READY
+RESULT 192
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:17,651]  - Application started with build version v1.21, and commitSha 00e11e8800f05b82cc5e794e3730c523e6e32729
+READY
+RESULT 2675
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:18,259]  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.8.2"}, "os": {"type": "Linux", "name": "Linux", "architecture": "aarch64", "version": "6.6.22-linuxkit"}, "platform": "Java/Eclipse Adoptium/17.0.9+9"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='appsmith', source='appsmith', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@1a28aef1, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@46d8f407], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@4647881c]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@320494b6], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+READY
+RESULT 733
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:18,432]  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=77752709, setName='mr1', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000007, setVersion=1, topologyVersion=TopologyVersion{processId=662716df090632a79fa693b0, counter=6}, lastWriteDate=Tue Apr 23 02:03:14 UTC 2024, lastUpdateTimeNanos=16814256290243}
+READY
+RESULT 2663
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:21,027]  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.2"}, "os": {"type": "Linux", "name": "Linux", "architecture": "aarch64", "version": "6.6.22-linuxkit"}, "platform": "Java/Eclipse Adoptium/17.0.9+9"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='appsmith', source='appsmith', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@5cf8676a, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@46d8f407], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@4647881c]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@320494b6], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+READY
+RESULT 733
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:21,035]  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=11303375, setName='mr1', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000007, setVersion=1, topologyVersion=TopologyVersion{processId=662716df090632a79fa693b0, counter=6}, lastWriteDate=Tue Apr 23 02:03:14 UTC 2024, lastUpdateTimeNanos=16816870155077}
+READY
+RESULT 111
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:21,330]  - Enabled plugins: []
+READY
+RESULT 112
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:21,330]  - Disabled plugins: []
+READY
+RESULT 132
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:21,336]  - PF4J version 3.10.0 in 'deployment' mode
+READY
+RESULT 212
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:21,866]  - Plugin 'appsmithai-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'saas-plugin@1.0-SNAPSHOT' resolved
+READY
+RESULT 1872
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:21,867]  - Plugin 'google-sheets-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'js-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'oracle-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'smtp-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'amazons3-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'mysql-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'restapi-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'postgres-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'googleai-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'snowflake-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'anthropic-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'elasticsearch-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'mssql-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'redshift-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'databricks-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'mongo-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'graphql-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'aws-lambda-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'openai-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'dynamo-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'arangodb-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'redis-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Plugin 'firestore-plugin@1.0-SNAPSHOT' resolved
+[2024-04-23 02:03:21,867]  - Start plugin 'appsmithai-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 131
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:21,884]  - Start plugin 'saas-plugin@1.0-SNAPSHOT'
+READY
+RESULT 140
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:21,885]  - Start plugin 'google-sheets-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837801.9444196,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"55576","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.01109425,"size":2026,"status":200,"resp_headers":{"Etag":["\"scdhp71ka\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:07 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["2026"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 129
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:21,976]  - Start plugin 'js-plugin@1.0-SNAPSHOT'
+READY
+RESULT 133
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:21,977]  - Start plugin 'oracle-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 131
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:21,995]  - Start plugin 'smtp-plugin@1.0-SNAPSHOT'
+READY
+RESULT 542
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 135
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,017]  - Start plugin 'amazons3-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 132
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,036]  - Start plugin 'mysql-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 134
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,050]  - Start plugin 'restapi-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 310
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+READY
+RESULT 139
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 135
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,060]  - Start plugin 'postgres-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 135
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,070]  - Start plugin 'googleai-plugin@1.0-SNAPSHOT'
+READY
+RESULT 136
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,071]  - Start plugin 'snowflake-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 284
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,086]  - Start plugin 'anthropic-plugin@1.0-SNAPSHOT'
+[2024-04-23 02:03:22,087]  - Start plugin 'elasticsearch-plugin@1.0-SNAPSHOT'
+[2024-04-23 02:03:22,088]  - Start plugin 'mssql-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 135
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,098]  - Start plugin 'redshift-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 137
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,110]  - Start plugin 'databricks-plugin@1.0-SNAPSHOT'
+READY
+RESULT 132
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,120]  - Start plugin 'mongo-plugin@1.0-SNAPSHOT'
+READY
+RESULT 134
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,124]  - Start plugin 'graphql-plugin@1.0-SNAPSHOT'
+READY
+RESULT 137
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,125]  - Start plugin 'aws-lambda-plugin@1.0-SNAPSHOT'
+READY
+RESULT 133
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,172]  - Start plugin 'openai-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 133
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,185]  - Start plugin 'dynamo-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 135
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,201]  - Start plugin 'arangodb-plugin@1.0-SNAPSHOT'
+READY
+RESULT 132
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,203]  - Start plugin 'redis-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 136
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:22,215]  - Start plugin 'firestore-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 365
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+READY
+RESULT 239
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 217
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1514 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 193
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:25,238]  - Mongock runner COMMUNITY version[5.1.6]
+[2024-04-23 02:03:25,238]  - Running Mongock with NO metadata
+READY
+RESULT 416
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:25,238]  - Property transaction-enabled not provided. It will become true as default in next versions. Set explicit value to false in case transaction are not desired.
+[2024-04-23 02:03:25,238]  - Property transaction-enabled not provided and is unknown if driver is transactionable. BY DEFAULT MONGOCK WILL RUN IN NO-TRANSACTION MODE.
+READY
+RESULT 161
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:25,358]  - Reflections took 88 ms to scan 1 urls, producing 5 keys and 60 values
+READY
+RESULT 161
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:25,392]  - Reflections took 20 ms to scan 1 urls, producing 5 keys and 60 values
+READY
+RESULT 126
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:25,673]  - Mongock trying to acquire the lock
+READY
+RESULT 153
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:25,709]  - Mongock acquired the lock until: Tue Apr 23 02:04:25 UTC 2024
+READY
+RESULT 123
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:25,710]  - Starting mongock lock daemon...
+READY
+RESULT 177
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:25,728]  - Mongock starting the data migration sequence id[2024-04-23T02:03:25.110786717-266]...
+READY
+RESULT 239
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:25,733]  - PASSED OVER - {"id"="initialize-schema-version", "type"="execution", "author"="", "class"="DatabaseChangelog0", "method"="initializeSchemaVersion"}
+READY
+RESULT 2898
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:25,733]  - PASSED OVER - {"id"="initial-plugins", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="initialPlugins"}
+[2024-04-23 02:03:25,733]  - PASSED OVER - {"id"="initial-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addInitialIndexes"}
+[2024-04-23 02:03:25,733]  - PASSED OVER - {"id"="set-initial-sequence-for-datasource", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setInitialSequenceForDatasource"}
+[2024-04-23 02:03:25,733]  - PASSED OVER - {"id"="set-plugin-image-and-docs-link", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setPluginImageAndDocsLink"}
+[2024-04-23 02:03:25,733]  - PASSED OVER - {"id"="install-mysql-plugins", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="mysqlPlugin"}
+[2024-04-23 02:03:25,733]  - PASSED OVER - {"id"="update-database-documentation-links", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateDatabaseDocumentationLinks"}
+[2024-04-23 02:03:25,733]  - PASSED OVER - {"id"="generate-unique-id-for-instance", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="generateUniqueIdForInstance"}
+[2024-04-23 02:03:25,733]  - PASSED OVER - {"id"="fix-password-reset-token-expiration", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="fixTokenExpiration"}
+[2024-04-23 02:03:25,733]  - PASSED OVER - {"id"="add-elastic-search-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addElasticSearchPlugin"}
+[2024-04-23 02:03:25,733]  - PASSED OVER - {"id"="add-dynamo-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addDynamoPlugin"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="use-png-logos", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="usePngLogos"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="add-redis-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addRedisPlugin"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="add-msSql-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addMsSqlPlugin"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="createNewPageIndexAfterDroppingNewPage", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addNewPageIndexAfterDroppingNewPage"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="createNewActionIndexAfterDroppingNewAction", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addNewActionIndexAfterDroppingNewAction"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="new-page-new-action-add-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addNewPageAndNewActionNewIndexes"}
+READY
+RESULT 5115
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="update-action-index-to-single-multiple-indices", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateActionIndexToSingleMultipleIndices"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="add-firestore-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addFirestorePlugin"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="add-redshift-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addRedshiftPlugin"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="clear-userdata-collection", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="clearUserDataCollection"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="update-database-documentation-links-v1-2-1", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateDatabaseDocumentationLinks_v1_2_1"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="add-amazons3-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addAmazonS3Plugin"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="update-plugin-datasource-form-components", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updatePluginDatasourceFormComponents"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="update-s3-datasource-configuration-and-label", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateS3DatasourceConfigurationAndLabel"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="add-google-sheets-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addGoogleSheetsPlugin"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="mark-instance-unregistered", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="markInstanceAsUnregistered"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="add-snowflake-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addSnowflakePlugin"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="add-arangodb-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addArangoDBPlugin"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="set-svg-logo-to-plugins", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setSvgLogoToPluginIcons"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="create-plugin-reference-for-genarate-CRUD-page", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="createPluginReferenceForGenerateCRUDPage"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="create-plugin-reference-for-S3-GSheet-genarate-CRUD-page", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="createPluginReferenceForS3AndGSheetGenerateCRUDPage"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="add-js-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addJSPlugin"}
+[2024-04-23 02:03:25,734]  - PASSED OVER - {"id"="update-plugin-package-name-index", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updatePluginPackageNameIndexToPluginNamePackageNameAndVersion"}
+[2024-04-23 02:03:25,735]  - PASSED OVER - {"id"="migrate-s3-to-uqi", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateS3PluginToUqi"}
+[2024-04-23 02:03:25,735]  - PASSED OVER - {"id"="add-smtp-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addSmtpPluginPlugin"}
+[2024-04-23 02:03:25,735]  - PASSED OVER - {"id"="add-google-sheets-plugin-name", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addPluginNameForGoogleSheets"}
+[2024-04-23 02:03:25,735]  - PASSED OVER - {"id"="migrate-firestore-to-uqi", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateFirestorePluginToUqi"}
+[2024-04-23 02:03:25,735]  - PASSED OVER - {"id"="migrate-firestore-to-uqi-3", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateFirestorePluginToUqi3"}
+[2024-04-23 02:03:25,735]  - PASSED OVER - {"id"="update-index-for-git", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateGitIndexes"}
+[2024-04-23 02:03:25,735]  - PASSED OVER - {"id"="use-assets-cdn-for-plugin-icons", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="useAssetsCDNForPluginIcons"}
+[2024-04-23 02:03:25,735]  - PASSED OVER - {"id"="update-index-for-newAction-actionCollection-userData", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateNewActionActionCollectionAndUserDataIndexes"}
+[2024-04-23 02:03:25,735]  - PASSED OVER - {"id"="mark-mssql-crud-unavailable", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="markMSSQLCrudUnavailable"}
+[2024-04-23 02:03:25,735]  - PASSED OVER - {"id"="update-index-for-newAction-actionCollection", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateNewActionActionCollectionIndexes"}
+READY
+RESULT 1825
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:25,736]  - PASSED OVER - {"id"="fix-plugin-title-casing", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="fixPluginTitleCasing"}
+[2024-04-23 02:03:25,736]  - PASSED OVER - {"id"="update-git-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addIndexesForGit"}
+[2024-04-23 02:03:25,736]  - PASSED OVER - {"id"="add-workspace-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addWorkspaceIndexes"}
+[2024-04-23 02:03:25,736]  - PASSED OVER - {"id"="add-default-tenant", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addDefaultTenant"}
+[2024-04-23 02:03:25,736]  - PASSED OVER - {"id"="organization-to-workspace-indexes-recreate", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="organizationToWorkspaceIndexesRecreate"}
+[2024-04-23 02:03:25,736]  - PASSED OVER - {"id"="flush-spring-redis-keys-2a", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="clearRedisCache2"}
+[2024-04-23 02:03:25,736]  - PASSED OVER - {"id"="add-anonymousUser", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addAnonymousUser"}
+[2024-04-23 02:03:25,736]  - PASSED OVER - {"id"="add-instance-config-object", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addInstanceConfigurationPlaceHolder"}
+[2024-04-23 02:03:25,736]  - PASSED OVER - {"id"="add-anonymous-user-permission-group", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addAnonymousUserPermissionGroup"}
+[2024-04-23 02:03:25,736]  - PASSED OVER - {"id"="create-themes-indices", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="createThemesIndices"}
+READY
+RESULT 189
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:25,799]  - method[createSystemThemes3] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 974
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,203]  - RE-APPLIED - {"id"="create-system-themes-v3", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="createSystemThemes3"}
+[2024-04-23 02:03:26,203]  - PASSED OVER - {"id"="create-indices-on-permissions-for-performance", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addPermissionGroupIndex"}
+[2024-04-23 02:03:26,203]  - PASSED OVER - {"id"="update-bad-theme-state", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateBadThemeState"}
+[2024-04-23 02:03:26,203]  - PASSED OVER - {"id"="add-tenant-admin-permissions-instance-admin", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addTenantAdminPermissionsToInstanceAdmin"}
+[2024-04-23 02:03:26,203]  - PASSED OVER - {"id"="add-graphql-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addGraphQLPlugin"}
+READY
+RESULT 1646
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,204]  - PASSED OVER - {"id"="indices-recommended-by-mongodb-cloud", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addIndicesRecommendedByMongoCloud"}
+[2024-04-23 02:03:26,204]  - PASSED OVER - {"id"="add-unique-index-for-uidstring", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addUniqueIndexOnUidString"}
+[2024-04-23 02:03:26,204]  - PASSED OVER - {"id"="change-readPermissionGroup-to-readPermissionGroupMembers", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="modifyReadPermissionGroupToReadPermissionGroupMembers"}
+[2024-04-23 02:03:26,204]  - PASSED OVER - {"id"="delete-permissions-in-permissionGroups", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="deletePermissionsInPermissionGroups"}
+[2024-04-23 02:03:26,204]  - PASSED OVER - {"id"="remove-usage-pulses-for-appsmith-cloud", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="removeUsagePulsesForAppsmithCloud"}
+[2024-04-23 02:03:26,204]  - PASSED OVER - {"id"="add-ssl-mode-settings-for-existing-mssql-datasources", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addSslModeSettingsForExistingMssqlDatasource"}
+[2024-04-23 02:03:26,204]  - PASSED OVER - {"id"="add-oracle-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addOraclePlugin"}
+[2024-04-23 02:03:26,204]  - PASSED OVER - {"id"="update-oracle-plugin-name", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateOraclePluginName"}
+READY
+RESULT 333
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,230]  - method[updateSuperUsers] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.repositories.CacheableRepositoryHelper, com.appsmith.server.solutions.PolicySolution, com.appsmith.server.acl.PolicyGenerator]
+READY
+RESULT 224
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,290]  - RE-APPLIED - {"id"="update-super-users", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateSuperUsers"}
+READY
+RESULT 255
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,293]  - method[com.appsmith.server.migrations.db.ce.Migration003AddInstanceNameToTenantConfiguration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 328
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,294]  - PASSED OVER - {"id"="add-instance-name-env-variable-tenant-configuration", "type"="execution", "author"="default_author", "class"="Migration003AddInstanceNameToTenantConfiguration", "method"="addInstanceNameEnvVarToTenantConfiguration"}
+READY
+RESULT 261
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,296]  - method[com.appsmith.server.migrations.db.ce.Migration004PermissionGroupDefaultWorkspaceIdMigration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 317
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,296]  - PASSED OVER - {"id"="migrate-default-workspace-id-to-default-domain-id", "type"="execution", "author"="default_author", "class"="Migration004PermissionGroupDefaultWorkspaceIdMigration", "method"="defaultWorkspaceIdMigration"}
+READY
+RESULT 524
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,298]  - method[com.appsmith.server.migrations.db.ce.Migration005CreateIndexForApplicationSnapshotMigration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,299]  - PASSED OVER - {"id"="create-index-for-application-snapshot-collection", "type"="execution", "author"="default_author", "class"="Migration005CreateIndexForApplicationSnapshotMigration", "method"="addIndexOnApplicationIdAndChunkOrder"}
+READY
+RESULT 465
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,332]  - method[com.appsmith.server.migrations.db.ce.Migration006ResetOnPageLoadEdgesInLayouts] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,333]  - PASSED OVER - {"id"="reset-on-page-load-edges-in-layouts", "type"="execution", "author"="default_author", "class"="Migration006ResetOnPageLoadEdgesInLayouts", "method"="executeMigration"}
+READY
+RESULT 252
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,335]  - method[com.appsmith.server.migrations.db.ce.Migration007OptOutUnsupportedPluginsForAirGap] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 316
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,335]  - PASSED OVER - {"id"="opt-out-unsupported-plugins-airgap-instance", "type"="execution", "author"="default_author", "class"="Migration007OptOutUnsupportedPluginsForAirGap", "method"="optOutUnsupportedPluginsForAirGapInstance"}
+READY
+RESULT 251
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,336]  - method[com.appsmith.server.migrations.db.ce.Migration008SupportNonHostedPluginsForAirgap] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 305
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,337]  - PASSED OVER - {"id"="support-non-self-hosted-plugins-for-airgap", "type"="execution", "author"="default_author", "class"="Migration008SupportNonHostedPluginsForAirgap", "method"="supportNonHostedPluginsForAirgap"}
+READY
+RESULT 444
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,338]  - method[com.appsmith.server.migrations.db.ce.Migration009UpdateOracleLogoToSVG] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,338]  - PASSED OVER - {"id"="update-oracle-logo-to-svg", "type"="execution", "author"="default_author", "class"="Migration009UpdateOracleLogoToSVG", "method"="updateOracleLogoToSVG"}
+READY
+RESULT 450
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,340]  - method[com.appsmith.server.migrations.db.ce.Migration010UpdatePluginDocsLink] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,340]  - PASSED OVER - {"id"="update-plugins-docs-link", "type"="execution", "author"="default_author", "class"="Migration010UpdatePluginDocsLink", "method"="updatePluginDocumentationLinks"}
+READY
+RESULT 625
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,341]  - method[com.appsmith.server.migrations.db.ce.Migration011CreateIndexDefaultDomainIdDefaultDomainTypeDropIndexDefaultWorkspaceId] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,341]  - PASSED OVER - {"id"="create-index-default-domain-id-default-domain-type", "type"="execution", "author"="default_author", "class"="Migration011CreateIndexDefaultDomainIdDefaultDomainTypeDropIndexDefaultWorkspaceId", "method"="createNewIndexDefaultDomainIdDefaultDomainTypeAndDropOldIndexDefaultWorkspaceId"}
+READY
+RESULT 309
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,353]  - method[com.appsmith.server.migrations.db.ce.Migration012RemoveStructureFromWithinDatasource] with arguments: [org.springframework.data.mongodb.core.MongoOperations, org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 298
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,353]  - PASSED OVER - {"id"="remove-structure-from-within-datasource-modified", "type"="execution", "author"="default_author", "class"="Migration012RemoveStructureFromWithinDatasource", "method"="executeMigration"}
+READY
+RESULT 456
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,355]  - method[com.appsmith.server.migrations.db.ce.Migration013AddEmailBodyTypeToSMTPPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,356]  - PASSED OVER - {"id"="add-smtp-email-body-type", "type"="execution", "author"="default_author", "class"="Migration013AddEmailBodyTypeToSMTPPlugin", "method"="addSmtpEmailBodyType"}
+READY
+RESULT 468
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,357]  - method[com.appsmith.server.migrations.db.ce.Migration014AddIndexToDatasourceStorage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,357]  - PASSED OVER - {"id"="index-for-datasource-storage", "type"="execution", "author"="default_author", "class"="Migration014AddIndexToDatasourceStorage", "method"="addingIndexToDatasourceStorage"}
+READY
+RESULT 887
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,359]  - method[com.appsmith.server.migrations.db.ce.Migration015AddPluginTypeIndexToNewActionCollection] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,359]  - PASSED OVER - {"id"="app-id-plugin-type-index-for-new-action", "type"="execution", "author"="default_author", "class"="Migration015AddPluginTypeIndexToNewActionCollection", "method"="addingIndexToNewAction"}
+[2024-04-23 02:03:26,360]  - method[com.appsmith.server.migrations.db.ce.Migration016RenameIndexesWithLongNames] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,361]  - PASSED OVER - {"id"="rename-indexes-with-long-names", "type"="execution", "author"="default_author", "class"="Migration016RenameIndexesWithLongNames", "method"="executeMigration"}
+READY
+RESULT 477
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,362]  - method[com.appsmith.server.migrations.db.ce.Migration017UnsetEncryptionVersion2Fields] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,362]  - PASSED OVER - {"id"="unset-not-encrypted-encryption-version-2-fields", "type"="execution", "author"="default_author", "class"="Migration017UnsetEncryptionVersion2Fields", "method"="executeMigration"}
+READY
+RESULT 477
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,364]  - method[com.appsmith.server.migrations.db.ce.Migration018UpdateOraclePluginDocumentationLink] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,364]  - PASSED OVER - {"id"="update-oracle-doc-link", "type"="execution", "author"="default_author", "class"="Migration018UpdateOraclePluginDocumentationLink", "method"="updateOracleDocumentationLink"}
+READY
+RESULT 262
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,365]  - method[com.appsmith.server.migrations.db.ce.Migration019RemoveNullEnvIdDatasourceStructureDocuments] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 288
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,366]  - PASSED OVER - {"id"="delete-null-envId-key-document", "type"="execution", "author"="default_author", "class"="Migration019RemoveNullEnvIdDatasourceStructureDocuments", "method"="executeMigration"}
+READY
+RESULT 306
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,373]  - method[com.appsmith.server.migrations.db.ce.Migration021MoveGoogleMapsKeyToTenantConfiguration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.configurations.CommonConfig]
+READY
+RESULT 297
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,373]  - PASSED OVER - {"id"="move-google-maps-key-to-tenant-configuration", "type"="execution", "author"="default_author", "class"="Migration021MoveGoogleMapsKeyToTenantConfiguration", "method"="executeMigration"}
+READY
+RESULT 271
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,374]  - method[com.appsmith.server.migrations.db.ce.Migration022AddConnectionMethodDefaultValueToAllMySQLDatasources] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 338
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,375]  - PASSED OVER - {"id"="add-connection-method-default-value-for-mysql", "type"="execution", "author"="default_author", "class"="Migration022AddConnectionMethodDefaultValueToAllMySQLDatasources", "method"="updateConnectionMethodDefaultValueForMySQL"}
+READY
+RESULT 237
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,376]  - method[com.appsmith.server.migrations.db.ce.Migration023UpdateJSPluginIcon] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 254
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,376]  - PASSED OVER - {"id"="update-js-plugin-icon", "type"="execution", "author"="default_author", "class"="Migration023UpdateJSPluginIcon", "method"="executeMigration"}
+READY
+RESULT 261
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,377]  - method[com.appsmith.server.migrations.db.ce.Migration024EnableGenerateCRUDPageToggleForMssqlPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 304
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,378]  - PASSED OVER - {"id"="enable-generate-crud-page-for-mssql", "type"="execution", "author"="default_author", "class"="Migration024EnableGenerateCRUDPageToggleForMssqlPlugin", "method"="enableGenerateCRUDPageToggle"}
+READY
+RESULT 247
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,379]  - method[com.appsmith.server.migrations.db.ce.Migration025AddIndexDeletedInApplication] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 290
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,379]  - PASSED OVER - {"id"="add-index-application-deleted", "type"="execution", "author"="default_author", "class"="Migration025AddIndexDeletedInApplication", "method"="createIndexInApplicationCollection"}
+READY
+RESULT 263
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,380]  - method[com.appsmith.server.migrations.db.ce.Migration025RemoveUnassignPermissionFromUnnecessaryRoles] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 317
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,380]  - PASSED OVER - {"id"="remove-unassign-permission-from-workspace-dev-viewer-roles", "type"="execution", "author"="default_author", "class"="Migration025RemoveUnassignPermissionFromUnnecessaryRoles", "method"="executeMigration"}
+READY
+RESULT 254
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,382]  - method[com.appsmith.server.migrations.db.ce.Migration026AddIndexTenantAndDeletedInWorkspace] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 297
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,382]  - PASSED OVER - {"id"="add-index-workspace-tenant-deleted", "type"="execution", "author"="default_author", "class"="Migration026AddIndexTenantAndDeletedInWorkspace", "method"="addIndexInWorkspaceCollection"}
+READY
+RESULT 500
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,383]  - method[com.appsmith.server.migrations.db.ce.Migration027AddIndexDatasourceIdAndDeletedInAction] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,383]  - PASSED OVER - {"id"="new-action-compound-index-datasource-id", "type"="execution", "author"="default_author", "class"="Migration027AddIndexDatasourceIdAndDeletedInAction", "method"="addIndexInNewActionCollection"}
+READY
+RESULT 569
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,385]  - method[com.appsmith.server.migrations.db.ce.Migration028TagUserManagementRolesWithoutDefaultDomainTypeAndId] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,385]  - PASSED OVER - {"id"="tag-user-management-roles-without-default-domain-type-and-id", "type"="execution", "author"="default_author", "class"="Migration028TagUserManagementRolesWithoutDefaultDomainTypeAndId", "method"="tagUserManagementRolesWithoutDefaultDomainTypeAndId"}
+READY
+RESULT 263
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,386]  - method[com.appsmith.server.migrations.db.ce.Migration029PopulateDefaultDomainIdInUserManagementRoles] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 338
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,386]  - PASSED OVER - {"id"="populate-default-domain-id-in-user-management-roles", "type"="execution", "author"="default_author", "class"="Migration029PopulateDefaultDomainIdInUserManagementRoles", "method"="populateDefaultDomainIdInUserManagementRoles"}
+READY
+RESULT 494
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,387]  - method[com.appsmith.server.migrations.db.ce.Migration030TagUsersWithNoUserManagementRoles] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,388]  - PASSED OVER - {"id"="tag-users-with-no-user-management-roles", "type"="execution", "author"="default_author", "class"="Migration030TagUsersWithNoUserManagementRoles", "method"="tagUsersWithNoUserManagementRoles"}
+READY
+RESULT 309
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,390]  - method[com.appsmith.server.migrations.db.ce.Migration031CreateUserManagementRolesForUsersTaggedIn030] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.solutions.PolicySolution]
+READY
+RESULT 358
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,391]  - PASSED OVER - {"id"="create-user-management-roles-for-users-tagged-in-migration-030", "type"="execution", "author"="default_author", "class"="Migration031CreateUserManagementRolesForUsersTaggedIn030", "method"="createUserManagementRolesForUsersTaggedInMigration030"}
+READY
+RESULT 500
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,392]  - method[com.appsmith.server.migrations.db.ce.Migration032AddingXmlParserToApplicationLibraries] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,393]  - PASSED OVER - {"id"="add-xml-parser-to-application-jslibs", "type"="execution", "author"="default_author", "class"="Migration032AddingXmlParserToApplicationLibraries", "method"="addXmlParserEntryToEachApplication"}
+READY
+RESULT 429
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,394]  - method[com.appsmith.server.migrations.db.ce.Migration033AddOpenAIPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,394]  - PASSED OVER - {"id"="add-open-ai-plugin", "type"="execution", "author"="default_author", "class"="Migration033AddOpenAIPlugin", "method"="addPluginToDbAndWorkspace"}
+READY
+RESULT 259
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,396]  - method[com.appsmith.server.migrations.db.ce.Migration034ChangeOpenAIIntegrationDocumentationLink] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 307
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,396]  - PASSED OVER - {"id"="change-open-ai-integration-documentation-link", "type"="execution", "author"="default_author", "class"="Migration034ChangeOpenAIIntegrationDocumentationLink", "method"="changeDocumentationLink"}
+READY
+RESULT 237
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,398]  - method[com.appsmith.server.migrations.db.ce.Migration035AddAnthropicPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 262
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,398]  - PASSED OVER - {"id"="add-anthropic-plugin", "type"="execution", "author"="default_author", "class"="Migration035AddAnthropicPlugin", "method"="addPluginToDbAndWorkspace"}
+READY
+RESULT 362
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,410]  - method[com.appsmith.server.migrations.db.ce.Migration035RemoveMockDbEndPointInDatasourceInSelfHostedInstance] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.configurations.CommonConfig, com.appsmith.server.solutions.EnvManager]
+READY
+RESULT 340
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,411]  - PASSED OVER - {"id"="remove-mockdb-endpoint-in-datasource-self-hosted-instance", "type"="execution", "author"="default_author", "class"="Migration035RemoveMockDbEndPointInDatasourceInSelfHostedInstance", "method"="removeMockDbEndpointInDatasource"}
+READY
+RESULT 493
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,414]  - method[com.appsmith.server.migrations.db.ce.Migration036AddRecentlyUsedEntitiesForUserData] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,414]  - PASSED OVER - {"id"="add-recently-used-entities-for-user", "type"="execution", "author"="default_author", "class"="Migration036AddRecentlyUsedEntitiesForUserData", "method"="addRecentlyUsedEntitiesForUserData"}
+READY
+RESULT 254
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,419]  - method[com.appsmith.server.migrations.db.ce.Migration037AddCompoundIndexForNameAndDeletedAt] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 309
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,420]  - PASSED OVER - {"id"="add-compound-index-name-deleted", "type"="execution", "author"="default_author", "class"="Migration037AddCompoundIndexForNameAndDeletedAt", "method"="addIndexInWorkspaceAndApplicationsCollection"}
+READY
+RESULT 479
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,421]  - method[com.appsmith.server.migrations.db.ce.Migration037MarkAnonymousUserAsSystemGenerated] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,421]  - PASSED OVER - {"id"="mark-anonymous-user-as-system-generated", "type"="execution", "author"="default_author", "class"="Migration037MarkAnonymousUserAsSystemGenerated", "method"="executeMigration"}
+READY
+RESULT 254
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,423]  - method[com.appsmith.server.migrations.db.ce.Migration038AddCompoundIndexForActionCollection] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 296
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,423]  - PASSED OVER - {"id"="add-compound-index-action-collection", "type"="execution", "author"="default_author", "class"="Migration038AddCompoundIndexForActionCollection", "method"="addIndexInActionCollection"}
+READY
+RESULT 236
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,425]  - method[com.appsmith.server.migrations.db.ce.Migration038AddGoogleAIPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 261
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,425]  - PASSED OVER - {"id"="add-google-ai-plugin", "type"="execution", "author"="default_author", "class"="Migration038AddGoogleAIPlugin", "method"="addPluginToDbAndWorkspace"}
+READY
+RESULT 255
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,426]  - method[com.appsmith.server.migrations.db.ce.Migration039AddCompoundIndexForDatasourceStorage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 485
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,426]  - PASSED OVER - {"id"="add-compound-index-datasource-storage", "type"="execution", "author"="default_author", "class"="Migration039AddCompoundIndexForDatasourceStorage", "method"="addIndexInDatasourceStorageCollection"}
+[2024-04-23 02:03:26,428]  - method[com.appsmith.server.migrations.db.ce.Migration039AddDatabricksPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 264
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,428]  - PASSED OVER - {"id"="add-databricks-plugin", "type"="execution", "author"="default_author", "class"="Migration039AddDatabricksPlugin", "method"="addPluginToDbAndWorkspace"}
+READY
+RESULT 477
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,430]  - method[com.appsmith.server.migrations.db.ce.Migration039OpenAIMessagesJsToggle] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,430]  - PASSED OVER - {"id"="move-messages-to-data-key-in-openai", "type"="execution", "author"="default_author", "class"="Migration039OpenAIMessagesJsToggle", "method"="moveMessagesToDataKeyForSupportingJsToggle"}
+READY
+RESULT 237
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,432]  - method[com.appsmith.server.migrations.db.ce.Migration040AddAWSLambdaPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 263
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,433]  - PASSED OVER - {"id"="add-aws-lambda-plugin", "type"="execution", "author"="default_author", "class"="Migration040AddAWSLambdaPlugin", "method"="addPluginToDbAndWorkspace"}
+READY
+RESULT 238
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,434]  - method[com.appsmith.server.migrations.db.ce.Migration040AddAppsmithAiPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 265
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,435]  - PASSED OVER - {"id"="add-appsmith-ai-plugin", "type"="execution", "author"="default_author", "class"="Migration040AddAppsmithAiPlugin", "method"="addPluginToDbAndWorkspace"}
+READY
+RESULT 988
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,436]  - method[com.appsmith.server.migrations.db.ce.Migration041TagWorkspacesForGitOperationsPermissionMigration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,436]  - PASSED OVER - {"id"="tag-workspaces-to-migrate-adding-git-permissions", "type"="execution", "author"="default_author", "class"="Migration041TagWorkspacesForGitOperationsPermissionMigration", "method"="addPermissionForGitOperationsToExistingWorkspaces"}
+[2024-04-23 02:03:26,437]  - method[com.appsmith.server.migrations.db.ce.Migration042AddPermissionsForGitOperations] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,437]  - PASSED OVER - {"id"="add-permissions-for-git-operations", "type"="execution", "author"="default_author", "class"="Migration042AddPermissionsForGitOperations", "method"="addPermissionForGitOperationsToExistingApplications"}
+READY
+RESULT 507
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,439]  - method[com.appsmith.server.migrations.db.ce.Migration043AddIndexActionCollectionPageID] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,439]  - PASSED OVER - {"id"="add-index-to-action-collection-default-resources-pageid", "type"="execution", "author"="default_author", "class"="Migration043AddIndexActionCollectionPageID", "method"="addIndexToActionCollectionCollection"}
+READY
+RESULT 244
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,440]  - method[com.appsmith.server.migrations.db.ce.Migration044AddIndexesToDomainObjects] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 274
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,441]  - PASSED OVER - {"id"="add-index-to-domain-objects", "type"="execution", "author"="default_author", "class"="Migration044AddIndexesToDomainObjects", "method"="addIndexToDomainObjects"}
+READY
+RESULT 525
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,442]  - method[com.appsmith.server.migrations.db.ce.Migration045AddDefaultAppsmithAiDatasourceForOrphanActions] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,443]  - PASSED OVER - {"id"="add-default-appsmith-datasource", "type"="execution", "author"="default_author", "class"="Migration045AddDefaultAppsmithAiDatasourceForOrphanActions", "method"="addDefaultAppsmithAiDatasourceForOrphanActions"}
+READY
+RESULT 240
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,444]  - method[com.appsmith.server.migrations.db.ce.Migration046DeleteArchivedPlugins] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 265
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,444]  - PASSED OVER - {"id"="delete-archived-pluginsd", "type"="execution", "author"="default_author", "class"="Migration046DeleteArchivedPlugins", "method"="deleteArchivedPlugins"}
+READY
+RESULT 540
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,446]  - method[com.appsmith.server.migrations.db.ce.Migration047AddMissingFieldsInDefaultAppsmithAiDatasource] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,446]  - PASSED OVER - {"id"="add-missing-fields-in-default-appsmith-datasource", "type"="execution", "author"="default_author", "class"="Migration047AddMissingFieldsInDefaultAppsmithAiDatasource", "method"="addMissingFieldsInDefaultAppsmithAiDatasource"}
+READY
+RESULT 247
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,448]  - method[com.appsmith.server.migrations.db.ce.Migration048AddCompoundIndexToUserEntity] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 665
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,448]  - PASSED OVER - {"id"="add-compound-index-in-user-collection", "type"="execution", "author"="default_author", "class"="Migration048AddCompoundIndexToUserEntity", "method"="addMissingIndexInUserCollection"}
+[2024-04-23 02:03:26,450]  - method[com.appsmith.server.migrations.db.ce.Migration049RemoveLayoutBaseFields] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,450]  - PASSED OVER - {"id"="remove-layout-base-fields", "type"="execution", "author"="default_author", "class"="Migration049RemoveLayoutBaseFields", "method"="execute"}
+READY
+RESULT 579
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,452]  - method[com.appsmith.server.migrations.db.ce.Migration020TransferToDatasourceStorage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-23 02:03:26,452]  - PASSED OVER - {"id"="migrate-configurations-to-data-storage-v2", "type"="execution", "author"="default_author", "class"="Migration020TransferToDatasourceStorage", "method"="executeMigration"}
+[2024-04-23 02:03:26,452]  - Mongock releasing the lock
+[2024-04-23 02:03:26,452]  - Mongock releasing the lock
+READY
+RESULT 117
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,469]  - Mongock released the lock
+READY
+RESULT 112
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:26,469]  - Mongock has finished
+READY
+RESULT 144
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:27,604]  - Exposing 2 endpoint(s) beneath base path '/actuator'
+READY
+RESULT 118
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:27,984]  - Netty started on port 8080
+READY
+RESULT 164
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:28,018]  - Started ServerApplication in 15.693 seconds (process running for 16.657)
+READY
+RESULT 139
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:28,034]  - Performing RTS health check of this instance...
+READY
+RESULT 203
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:28,060]  - In memory cache miss for anonymous user permission groups. Fetching from DB and adding it to in memory storage.
+READY
+RESULT 146
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:28,136]  - Fetched and set conenncted mongo db version as: 5.0.26
+READY
+RESULT 118
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:28,310]  - RTS health check succeeded
+READY
+RESULT 141
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:28,315]  - License verification completed with status: valid
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837817.1582503,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"45788","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001267958,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 128
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:38,019]  - Fetching features for default tenant
+READY
+RESULT 162
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:38,117]  - Cache entry evicted for key tenantNewFeatures:6625e6a77bb2330c2ceda271
+READY
+RESULT 153
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:38,129]  - Cache miss for key tenantNewFeatures:6625e6a77bb2330c2ceda271
+READY
+RESULT 127
+processname:redis groupname:redis pid:1511 channel:stdout
+1511:M 23 Apr 2024 02:03:38.180 * 1 changes in 15 seconds. Saving...
+READY
+RESULT 130
+processname:redis groupname:redis pid:1511 channel:stdout
+1511:M 23 Apr 2024 02:03:38.182 * Background saving started by pid 1828
+READY
+RESULT 109
+processname:redis groupname:redis pid:1511 channel:stdout
+1828:C 23 Apr 2024 02:03:38.185 * DB saved on disk
+READY
+RESULT 134
+processname:redis groupname:redis pid:1511 channel:stdout
+1828:C 23 Apr 2024 02:03:38.185 * RDB: 0 MB of memory used by copy-on-write
+READY
+RESULT 134
+processname:redis groupname:redis pid:1511 channel:stdout
+1511:M 23 Apr 2024 02:03:38.283 * Background saving terminated with success
+READY
+RESULT 160
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:38,897]  - Cache entry added for key tenantNewFeatures:6625e6a77bb2330c2ceda271
+READY
+RESULT 121
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:03:45,559]  - Cancelled mongock lock daemon
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837832.37077,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59384","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00133525,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 127
+processname:redis groupname:redis pid:1511 channel:stdout
+1511:M 23 Apr 2024 02:03:54.053 * 1 changes in 15 seconds. Saving...
+READY
+RESULT 130
+processname:redis groupname:redis pid:1511 channel:stdout
+1511:M 23 Apr 2024 02:03:54.055 * Background saving started by pid 1841
+READY
+RESULT 109
+processname:redis groupname:redis pid:1511 channel:stdout
+1841:C 23 Apr 2024 02:03:54.060 * DB saved on disk
+READY
+RESULT 134
+processname:redis groupname:redis pid:1511 channel:stdout
+1841:C 23 Apr 2024 02:03:54.061 * RDB: 0 MB of memory used by copy-on-write
+READY
+RESULT 134
+processname:redis groupname:redis pid:1511 channel:stdout
+1511:M 23 Apr 2024 02:03:54.157 * Background saving terminated with success
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837847.58651,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"54466","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00113525,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837862.8104055,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"40186","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001337958,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837877.983039,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"39516","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.000230583,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837893.159029,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"33802","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000216333,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837908.330046,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"47166","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000923834,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837923.604806,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"58508","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001281292,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837938.827132,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"57246","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001333292,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837954.0705647,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"43464","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001312916,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837969.3223288,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"54564","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001283208,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837984.625056,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"51136","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001777125,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"],"Content-Security-Policy":["frame-ancestors 'self' *"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713837999.8385615,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"54052","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001263166,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838015.1181123,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"56348","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001275,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838030.4018865,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"44510","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001250209,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838045.6599598,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"43702","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001167209,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838060.9082634,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"58640","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.001298292,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838076.3113368,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"47504","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001432375,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838091.5718536,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"38248","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001211959,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 702
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838106.81223,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"42024","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001312959,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838122.0653627,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"42558","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.002470292,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838137.262017,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"55020","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000352708,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838152.5629523,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59054","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001431916,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838167.822205,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"58230","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.002006417,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838183.1052175,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"32864","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001257333,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"],"Content-Security-Policy":["frame-ancestors 'self' *"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838198.3836114,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"49476","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00140925,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838213.6312864,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"56438","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.001514542,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838228.9056242,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"37124","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.001276917,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838244.1628473,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"33244","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001232334,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838259.4122024,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59000","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00125625,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838274.7347941,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"56658","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.004288666,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838290.0811615,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"33380","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001062125,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838305.4312503,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"34466","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001459417,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"],"Content-Security-Policy":["frame-ancestors 'self' *"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838320.7287548,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"47430","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001277042,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838336.022831,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"43336","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001375042,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838351.3263316,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"56992","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.004934,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 700
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838366.588382,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"56380","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.002249,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838381.9131172,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"38986","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001795833,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838397.2053745,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"33492","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.002383375,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838412.4719224,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"35872","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000865916,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838427.7563472,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"35570","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001429584,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838443.010449,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"42194","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.000801959,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838458.1903079,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"45850","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000317459,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838473.4679363,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"54654","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001179084,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838488.7088394,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"37182","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.001260917,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838503.9019337,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"43358","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00073925,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838519.1108909,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"44396","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.003084958,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838534.3278563,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"45894","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.001672958,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838549.5488153,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"41468","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001180041,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838564.7672539,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"55226","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000559583,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838580.0196285,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"58924","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.001565583,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838595.2860374,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"57374","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.00130875,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838610.4844303,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"50090","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000758542,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838625.6797996,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"33590","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001305541,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838640.9352164,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"49360","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00143575,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838656.1142168,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"34908","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000413,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"],"Content-Security-Policy":["frame-ancestors 'self' *"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838671.3631322,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"43016","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001115167,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838686.6133227,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"52902","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001388875,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838701.8283613,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59390","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000790833,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838717.0838559,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"53122","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001443292,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838732.3410172,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"43060","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001169958,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838747.536664,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"41544","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000893209,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838762.7120504,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"46370","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000344791,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838777.9426885,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"38918","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.000963958,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838793.2344537,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"44928","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001445917,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838808.4892464,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"36266","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001345208,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"],"Content-Security-Policy":["frame-ancestors 'self' *"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838823.717343,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"45906","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000778458,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838838.909843,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"36466","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.0016615,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838854.1477687,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"34696","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00120075,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838869.336115,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"35604","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000342042,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838884.5462701,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"46454","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.002235083,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838899.8125463,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"51394","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001026875,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838915.0239344,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"55582","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000710458,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838930.2819216,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59416","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001285333,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838945.4790108,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"50018","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000245708,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838960.6692147,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"55520","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001086542,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838975.899814,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"57096","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.000408708,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713838991.1013882,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"57116","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00277425,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839006.3131816,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"39408","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000455,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 702
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839021.5499156,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"37272","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.0008375,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839036.7407002,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"54976","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000322,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839051.9659333,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"45098","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001111042,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839067.225118,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59308","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001228042,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839082.5036013,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59644","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00157125,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839097.832464,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"37522","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.0013515,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"],"Content-Security-Policy":["frame-ancestors 'self' *"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839113.1000342,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"58696","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001628167,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839128.3790023,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"57024","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001615333,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839143.6543174,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"44036","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000870459,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839158.8922517,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"41546","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.001726209,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839174.1477778,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"47702","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001662958,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839189.4205878,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"50456","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001433709,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839204.693653,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"58120","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001247542,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839219.9639704,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59972","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001226916,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839235.183936,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"46224","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001159917,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839250.4467413,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"58776","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001246166,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839265.688801,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59490","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000867291,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839280.934904,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"48128","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001478792,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 700
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839296.286361,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"49246","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001771,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839311.539353,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"53728","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001292833,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839326.8112435,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"49024","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.002846791,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839342.0753214,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"42478","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.002644792,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839357.3281863,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"33360","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001267416,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839372.6024518,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"44106","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001309625,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839387.8613644,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"41278","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.004243834,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839403.1255438,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"56700","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001337375,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839418.3753893,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"43688","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001222209,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839433.6318748,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"34646","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001616084,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839448.879977,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"34090","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.001310708,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839464.1409023,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"51932","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001226666,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839479.3989327,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59194","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00180775,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839494.6221836,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"37834","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001227792,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 702
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839509.85548,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"39940","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000868458,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839525.109564,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"52316","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001279791,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839540.4708438,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"35656","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001521125,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839555.6547153,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"51438","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000269,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839570.9204583,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"50298","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001245375,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839586.229262,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"55314","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001353583,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839601.4767277,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"50800","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.004058125,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839616.6926606,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"41114","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000361625,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 128
+processname:backend groupname:backend pid:1514 channel:stdout
+[2024-04-23 02:33:37,996]  - Fetching features for default tenant
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839631.9548433,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"54586","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000881,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839647.231843,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"49552","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001395541,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839662.4823892,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"43134","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.001446458,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839677.7456374,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"47010","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001189916,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839692.917796,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"50910","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000353209,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839708.2940724,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"51960","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.010508125,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839723.5604293,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"54982","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001506958,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839738.740704,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"51912","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000224625,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839753.9092183,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"51768","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000961291,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839769.1084454,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"60800","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000724042,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839784.2870116,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"53614","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.000246333,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839799.8701732,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"37538","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001707167,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839815.088656,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"32990","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000880166,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839830.2635257,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"54868","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000259584,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839845.4959774,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"39092","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001432042,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839860.758932,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59566","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001350666,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839875.940166,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"41176","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000328833,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839891.2389474,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"60186","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001460583,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839906.4832127,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"54924","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001179166,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839921.6956325,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"52992","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001179334,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839936.9818714,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"39678","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001305292,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 702
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839952.24495,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"37552","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001342834,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839967.4472528,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"44716","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001193917,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839982.7147274,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"38312","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001292,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713839997.9815998,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"56622","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.00085275,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
