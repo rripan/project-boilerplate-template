@@ -55,10 +55,8 @@ We then attempted to connect these flask routes to our implementation of the app
 
 
 
-## License
+**Docker:- All three parts of our project are connected through docker and the instuctions to run it are in the docker compose file. The port for our project is as follows:     ports:
+      - "8001:4000"
 
-This project is licensed under the [MIT License](LICENSE).
+Video Link:- ** https://www.youtube.com
 
-## Contact
-
-If you have any questions or need further assistance, please contact our support team at [support@unigate.com](mailto:support@unigate.com). We're here to help you navigate the university admissions process with ease and confidence.
