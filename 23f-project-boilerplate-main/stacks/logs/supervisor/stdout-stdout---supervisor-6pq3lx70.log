@@ -1710,3 +1710,139 @@ RESULT 703
 processname:editor groupname:editor pid:1516 channel:stdout
 {"level":"info","ts":1713839997.9815998,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"56622","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.00085275,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
 READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840013.259466,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"36172","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001398791,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840028.4894805,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"53334","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001325958,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 702
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840043.7410471,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"36480","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.0011675,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 700
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840059.050253,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"37932","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001621,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840074.2531934,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"56192","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000807167,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840089.421404,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59432","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001071666,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840104.7102952,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"38982","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001469125,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840119.9747944,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"40962","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.003051,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"],"Content-Security-Policy":["frame-ancestors 'self' *"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840135.3111098,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"36292","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.001474084,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840150.5947473,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"42012","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001304,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840165.8677125,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59274","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001333166,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840181.118838,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59080","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001270292,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840196.3682241,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"57394","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001287709,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840211.532688,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"44542","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000283834,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840226.7812157,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"53422","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001451375,"size":5899,"status":200,"resp_headers":{"Content-Security-Policy":["frame-ancestors 'self' *"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840241.9470172,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"36554","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.000306792,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840257.225552,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"51952","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001488083,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840272.5437028,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"50694","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00129125,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 702
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840287.828721,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"49368","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00136575,"size":5899,"status":200,"resp_headers":{"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"],"Content-Security-Policy":["frame-ancestors 'self' *"],"Etag":["\"scdhpa4jv\""]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840303.0096853,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"51226","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000273042,"size":5899,"status":200,"resp_headers":{"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840318.2550619,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"33554","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00115625,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840333.5887687,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"41606","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001215125,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840348.8553445,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"53554","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001160459,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840364.0728676,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"55566","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001123791,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 702
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840379.2453184,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"46480","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.0002745,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840394.6179857,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"33930","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001625041,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"X-Content-Type-Options":["nosniff"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840409.8336844,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"39860","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001338541,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 701
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840425.0944731,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"34908","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.001327,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 702
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840440.3749259,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"36868","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.0016515,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840455.650825,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"50136","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.001325791,"size":5899,"status":200,"resp_headers":{"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"]}}
+READY
+RESULT 704
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840470.9181368,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"47798","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000726916,"size":5899,"status":200,"resp_headers":{"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840486.118024,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"59490","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.000229667,"size":5899,"status":200,"resp_headers":{"Accept-Ranges":["bytes"],"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840501.3832877,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"43558","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"User-Agent":["curl/7.68.0"],"Accept":["*/*"]}},"bytes_read":0,"user_id":"","duration":0.00742325,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
+RESULT 703
+processname:editor groupname:editor pid:1516 channel:stdout
+{"level":"info","ts":1713840516.666524,"logger":"http.log.access.log0","msg":"handled request","request":{"remote_ip":"::1","remote_port":"57088","client_ip":"::1","proto":"HTTP/1.1","method":"GET","host":"localhost","uri":"/","headers":{"Accept":["*/*"],"User-Agent":["curl/7.68.0"]}},"bytes_read":0,"user_id":"","duration":0.001197167,"size":5899,"status":200,"resp_headers":{"Content-Length":["5899"],"Content-Security-Policy":["frame-ancestors 'self' *"],"X-Content-Type-Options":["nosniff"],"Etag":["\"scdhpa4jv\""],"Content-Type":["text/html; charset=utf-8"],"Last-Modified":["Tue, 23 Apr 2024 02:03:10 GMT"],"Accept-Ranges":["bytes"]}}
+READY
