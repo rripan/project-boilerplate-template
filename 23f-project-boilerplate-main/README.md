@@ -42,6 +42,18 @@ UniGate is a comprehensive web application that revolutionizes the university ad
 - **Financial Aid and Scholarship Resources**: Access in-depth information about financial aid and scholarship options to better guide your students.
 - **Cost of Attendance Estimates**: Obtain estimated cost of attendance for universities your students are interested in, facilitating better financial planning.
 
+### Working and Implementation
+
+
+
+**Part 1:-**
+We started by creating a fork of the project and setup. We then created the database using MySql and filled it with mock data generated for different user personas with 50 columns of data for each entity and 10-15 entities in total. We created these tables ,generated the Mock data, exporting them in CSV files, and then proceeded to import the data to the created tables on datagrip. We also ran a few actions on the database to ensure it was working and the data was properly organized.
+
+Part 2:- 
+We created flask routes to implement the get, post, update and delete features of the REST API in our working model of it. Here, we created different blueprints for four different personas namely, applicant, application, events and guidance counselor. Taking inspiration from the blueprints of product and customer, I added the following features: Get an application, delete it if the applicant withdraws, update it with information, display upcoming events, delete them as the date passes and a few more. 
+We then attempted to connect these flask routes to our implementation of the app on appsmith. However, we failed to do so due to a significant amount of technical errors arising from three people working on three different platforms and trying to coordinate everything. 
+
+
 
 ## License
 
