@@ -55,7 +55,7 @@ We then attempted to connect these flask routes to our implementation of the app
 
 
 
-**Docker:- All three parts of our project are connected through docker and the instuctions to run it are in the docker compose file. The port for our project is as follows:     ports:
+Docker:- All three parts of our project are connected through docker and the instuctions to run it are in the docker compose file. The port for our project is as follows:     ports:
       - "8001:4000"
 
 Video Link:- ** https://www.youtube.com
