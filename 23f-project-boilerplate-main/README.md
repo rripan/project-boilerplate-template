@@ -49,10 +49,18 @@ UniGate is a comprehensive web application that revolutionizes the university ad
 **Part 1:-**
 We started by creating a fork of the project and setup. We then created the database using MySql and filled it with mock data generated for different user personas with 50 columns of data for each entity and 10-15 entities in total. We created these tables ,generated the Mock data, exporting them in CSV files, and then proceeded to import the data to the created tables on datagrip. We also ran a few actions on the database to ensure it was working and the data was properly organized.
 
-Part 2:- 
+**Part 2:-**
 We created flask routes to implement the get, post, update and delete features of the REST API in our working model of it. Here, we created different blueprints for four different personas namely, applicant, application, events and guidance counselor. Taking inspiration from the blueprints of product and customer, I added the following features: Get an application, delete it if the applicant withdraws, update it with information, display upcoming events, delete them as the date passes and a few more. 
 We then attempted to connect these flask routes to our implementation of the app on appsmith. However, we failed to do so due to a significant amount of technical errors arising from three people working on three different platforms and trying to coordinate everything. 
 
+**Part 3: -**
+We created 6 UI screens for three personas. 
+Persona 1 Applicant (waiting for decision), Persona 3 Waitlisted Applicant, 
+Persona 4 Rejected Applicant, and Persona 6 High School Guidance Counselor. 
+For the GET route, we created an application status window that displays the status of an applicant’s application and updates and it changes.
+For the POST route, we created a survey where the user can input their feedback.
+For the PUT route, we created an Uploaded Documents section where any uploaded documents by the user are shown. 
+For the DELETE route, the Application Checklist deletes completed tasks. 
 
 
 Docker:- All three parts of our project are connected through docker and the instuctions to run it are in the docker compose file. The port for our project is as follows:     ports:
