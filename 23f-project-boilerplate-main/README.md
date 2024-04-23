@@ -1,24 +1,48 @@
-# MySQL + Flask Boilerplate Project
+# UniGate - University Admissions Portal
 
-This repo contains a boilerplate setup for spinning up 3 Docker containers: 
-1. A MySQL 8 container for obvious reasons
-1. A Python Flask container to implement a REST API
-1. A Local AppSmith Server
+UniGate is a web application designed to streamline the university admission process for applicants, advisors, and admissions counselors. It provides a centralized platform for applicants to track their application status, access resources, and stay informed throughout the admission process.
 
-## How to setup and start the containers
-**Important** - you need Docker Desktop installed
+## Features
 
-1. Clone this repository.  
-1. Create a file named `db_root_password.txt` in the `secrets/` folder and put inside of it the root password for MySQL. 
-1. Create a file named `db_password.txt` in the `secrets/` folder and put inside of it the password you want to use for the a non-root user named webapp. 
-1. In a terminal or command prompt, navigate to the folder with the `docker-compose.yml` file.  
-1. Build the images with `docker compose build`
-1. Start the containers with `docker compose up`.  To run in detached mode, run `docker compose up -d`. 
+### For Applicants
 
-Part 1:- 
-Part 2:- 
-Part 3:- 
-Docker:- 
-Video Link:- g
+- **Application Status Tracker**: Applicants can view the current status of their application, including any outstanding requirements or documents needed.
+- **Admissions Checklist**: A personalized checklist guides applicants through the application process, ensuring they don't miss any important steps.
+- **Upcoming Events**: Stay updated with upcoming events related to the admissions process, such as campus tours, information sessions, or deadlines.
+- **Financial Aid and Scholarship Information**: Access to resources and information regarding financial aid opportunities and scholarship programs.
 
+### For High School Advisors
 
+- **Student Application Tracking**: Advisors can monitor the application progress of their students and provide guidance when needed.
+- **Resources for Advisors**: Access to helpful resources and tools specifically designed for high school advisors to support their students' college application journey.
+
+### For Admissions Counselors
+
+- **Applicant Management**: Admissions counselors can review and manage applicant information, documents, and application statuses.
+- **Communication Tools**: Integrated tools to communicate with applicants and advisors regarding application updates or requests for additional information.
+
+## Getting Started
+
+To get started with UniGate, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/your-repository.git`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm start`
+
+## Contributing
+
+We welcome contributions from the community! If you'd like to contribute to UniGate, please follow these steps:
+
+1. Fork the repository
+2. Create a new branch: `git checkout -b my-feature-branch`
+3. Make your changes and commit them: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin my-feature-branch`
+5. Submit a pull request
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+If you have any questions or need further assistance, please contact our support team at [support@unigate.com](mailto:support@unigate.com).
