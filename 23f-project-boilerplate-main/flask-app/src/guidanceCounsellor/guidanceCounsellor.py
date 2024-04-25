@@ -50,4 +50,4 @@ def delete_guidance_counsellor(counsellor_id):
         guidance_counsellors.remove(counsellor)
         return jsonify({'message': 'Guidance counsellor deleted'})
     else:
-        rreturn jsonify([])
+        return jsonify([])
