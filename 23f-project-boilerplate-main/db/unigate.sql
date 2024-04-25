@@ -2,7 +2,6 @@ CREATE DATABASE UniGate;
 USE UniGate;
 
 -- Create the tables
-
 -- Table: Person
 CREATE TABLE Person (
     PersonID INT AUTO_INCREMENT PRIMARY KEY,
@@ -38,11 +37,19 @@ CREATE TABLE AdmissionsOfficer (
     CONSTRAINT FK_AdmissionsOfficer_Person FOREIGN KEY (PersonID) REFERENCES Person(PersonID)
 );
 
+-- Table: Checklist
+CREATE TABLE Checklist (
+    ChecklistID INT AUTO_INCREMENT PRIMARY KEY,
+    ApplicationID INT NOT NULL,
+    Description VARCHAR(200) NOT NULL,
+    Status ENUM('Incomplete', 'Complete') NOT NULL,
+    CONSTRAINT FK_Checklist_Application FOREIGN KEY (ApplicationID) REFERENCES Application(ApplicationID)
+);
 -- Table: Application
 CREATE TABLE Application (
     ApplicationID INT AUTO_INCREMENT PRIMARY KEY,
     ApplicantID INT NOT NULL,
-    SubmissionDate char,
+    SubmissionDate VARCHAR(100),
     Status ENUM('Submitted', 'Accepted', 'Rejected') NOT NULL,
     GuidanceCounsellorID INT,
     AdmissionsOfficerID INT,
@@ -55,6 +62,7 @@ CREATE TABLE Application (
     CONSTRAINT FK_Application_AdmissionsOfficer FOREIGN KEY (AdmissionsOfficerID) REFERENCES AdmissionsOfficer(AdmissionsOfficerID)
 );
 
+
 -- Table: Document
 CREATE TABLE Document (
     DocumentID INT AUTO_INCREMENT PRIMARY KEY,
@@ -66,14 +74,7 @@ CREATE TABLE Document (
     CONSTRAINT FK_Document_Checklist FOREIGN KEY (ChecklistID) REFERENCES Checklist(ChecklistID)
 );
 
--- Table: Checklist
-CREATE TABLE Checklist (
-    ChecklistID INT AUTO_INCREMENT PRIMARY KEY,
-    ApplicationID INT NOT NULL,
-    Description VARCHAR(200) NOT NULL,
-    Status ENUM('Incomplete', 'Complete') NOT NULL,
-    CONSTRAINT FK_Checklist_Application FOREIGN KEY (ApplicationID) REFERENCES Application(ApplicationID)
-);
+
 
 -- Table: FinancialAid
 CREATE TABLE FinancialAid (
@@ -98,7 +99,7 @@ CREATE TABLE Scholarship (
 CREATE TABLE Event (
     EventID INT AUTO_INCREMENT PRIMARY KEY,
     Description VARCHAR(200) NOT NULL,
-    EventDate char
+    EventDate VARCHAR(200)
 );
 
 -- Table: Decision
@@ -173,3232 +174,911 @@ CREATE TABLE AttendsEvents (
     CONSTRAINT FK_AttendsEvents_Applicant FOREIGN KEY (ApplicantID) REFERENCES Applicant(ApplicantID),
     CONSTRAINT FK_AttendsEvents_Event FOREIGN KEY (EventID) REFERENCES Event(EventID)
 );
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (1, '17', 1);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (2, '39', 2);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (3, '9', 3);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (4, '7', 4);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (5, '37', 5);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (6, '33', 6);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (7, '46', 7);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (8, '21', 8);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (9, '10', 9);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (10, '36', 10);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (11, '42', 11);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (12, '1', 12);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (13, '44', 13);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (14, '43', 14);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (15, '32', 15);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (16, '19', 16);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (17, '31', 17);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (18, '4', 18);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (19, '45', 19);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (20, '34', 20);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (21, '15', 21);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (22, '6', 22);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (23, '50', 23);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (24, '28', 24);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (25, '13', 25);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (26, '18', 26);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (27, '27', 27);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (28, '14', 28);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (29, '12', 29);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (30, '16', 30);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (31, '49', 31);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (32, '24', 32);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (33, '11', 33);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (34, '48', 34);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (35, '23', 35);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (36, '8', 36);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (37, '47', 37);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (38, '5', 38);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (39, '20', 39);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (40, '38', 40);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (41, '25', 41);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (42, '26', 42);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (43, '41', 43);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (44, '22', 44);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (45, '40', 45);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (46, '2', 46);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (47, '29', 47);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (48, '35', 48);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (49, '3', 49);
+insert into AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID) values (50, '30', 50);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (1, '16', 'Maplewood High School', 83104833, 873572631, 736138415);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (2, '3', 'Cedarwood High School', 974485178, 3500823, 682430238);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (3, '46', 'Willowbrook High School', 439736886, 576704446, 914425581);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (4, '45', 'Willowbrook High School', 348868759, 868927744, 780716572);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (5, '48', 'Maplewood High School', 313319503, 636754994, 523801099);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (6, '36', 'Sunset High School', 22033701, 240150228, 635428008);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (7, '4', 'Willowbrook High School', 643193448, 879445236, 744104711);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (8, '47', 'Maplewood High School', 931825195, 758439759, 603837689);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (9, '31', 'Oakwood High School', 144525836, 695998177, 589140487);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (10, '29', 'Riverdale High School', 551236486, 769958418, 348513096);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (11, '15', 'Sunset High School', 579143696, 5581, 559321498);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (12, '7', 'Riverdale High School', 293840872, 743127815, 835624205);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (13, '9', 'Pinecrest High School', 737655290, 9968700, 484029042);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (14, '25', 'Pinecrest High School', 811104064, 790209682, 887400694);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (15, '18', 'Oakwood High School', 533631595, 583804835, 465672466);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (16, '42', 'Willowbrook High School', 193036518, 100525793, 77101285);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (17, '26', 'Maplewood High School', 965149451, 196533780, 203049683);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (18, '17', 'Cedarwood High School', 357990055, 309234147, 113401806);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (19, '39', 'Springfield High School', 445537817, 81128090, 573006339);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (20, '34', 'Springfield High School', 768934776, 945864190, 658478097);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (21, '22', 'Springfield High School', 852923023, 840336388, 409542099);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (22, '24', 'Maplewood High School', 239135353, 93403504, 293492003);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (23, '11', 'Maplewood High School', 920466859, 749640685, 513339510);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (24, '10', 'Oakwood High School', 194600271, 111485581, 52840404);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (25, '49', 'Oakwood High School', 1283802, 730343270, 3311448);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (26, '28', 'Sunset High School', 684639520, 882771139, 31757529);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (27, '6', 'Cedarwood High School', 205812457, 145319541, 655947881);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (28, '40', 'Hillcrest High School', 569582140, 58264830, 87839481);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (29, '44', 'Cedarwood High School', 835562384, 604267898, 101311854);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (30, '37', 'Pinecrest High School', 398309564, 346027400, 747833811);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (31, '14', 'Riverdale High School', 923821731, 106596906, 40548635);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (32, '20', 'Meadowview High School', 677247774, 886270559, 148281759);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (33, '33', 'Maplewood High School', 646943557, 123985230, 640929649);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (34, '35', 'Pinecrest High School', 620986297, 852143151, 551890069);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (35, '2', 'Springfield High School', 871916749, 114903878, 919449975);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (36, '21', 'Cedarwood High School', 223177131, 147426151, 549728902);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (37, '23', 'Willowbrook High School', 550184198, 707625772, 744519508);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (38, '38', 'Willowbrook High School', 222680142, 588876667, 717398795);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (39, '43', 'Springfield High School', 220186898, 580096481, 172715157);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (40, '1', 'Cedarwood High School', 490994328, 475697974, 109405311);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (41, '50', 'Cedarwood High School', 843838495, 817835991, 872967790);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (42, '19', 'Oakwood High School', 796980143, 459484914, 986656732);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (43, '27', 'Hillcrest High School', 553218977, 649319716, 884311469);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (44, '8', 'Springfield High School', 810901070, 206513548, 381241886);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (45, '5', 'Sunset High School', 75789076, 869582839, 266870388);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (46, '30', 'Sunset High School', 688933077, 507034681, 40584804);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (47, '12', 'Sunset High School', 956187473, 870607516, 181379907);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (48, '32', 'Springfield High School', 359278053, 445337536, 813048943);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (49, '41', 'Pinecrest High School', 518602328, 924829667, 439645595);
+# insert into Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) values (50, '13', 'Hillcrest High School', 793576733, 640776468, 546120990);
+ALTER TABLE Event MODIFY COLUMN EventDate VARCHAR(255);
+insert into Event (EventID, Description, EventDate) values (1, 'Alumni networking event for recent graduates', '10/13/2023 ');
+insert into Event (EventID, Description, EventDate) values (2, 'College fair at local community center', '10/13/2023');
+insert into Event (EventID, Description, EventDate) values (3, 'Application essay writing workshop', '4/25/2025');
+insert into Event (EventID, Description, EventDate) values (4, 'Campus tour for incoming freshmen', '2/25/2025');
+insert into Event (EventID, Description, EventDate) values (5, 'Virtual information session for prospective students', '7/11/2024');
+insert into Event (EventID, Description, EventDate) values (6, 'Panel discussion with current college students', '11/10/2025');
+insert into Event (EventID, Description, EventDate) values (7, 'Meet and greet with college faculty', '10/5/2024');
+insert into Event (EventID, Description, EventDate) values (8, 'Meet and greet with college faculty', '3/19/2025');
+insert into Event (EventID, Description, EventDate) values (9, 'Panel discussion with current college students', '7/6/2023');
+insert into Event (EventID, Description, EventDate) values (10, 'Panel discussion with current college students', '9/25/2023');
+insert into Event (EventID, Description, EventDate) values (11, 'Open house event for high school seniors', '5/13/2023');
+insert into Event (EventID, Description, EventDate) values (12, 'College fair at local community center', '9/8/2023');
+insert into Event (EventID, Description, EventDate) values (13, 'Open house event for high school seniors', '2/12/2024');
+insert into Event (EventID, Description, EventDate) values (14, 'Application essay writing workshop', '6/19/2025');
+insert into Event (EventID, Description, EventDate) values (15, 'Open house event for high school seniors', '2/11/2023');
+insert into Event (EventID, Description, EventDate) values (16, 'Campus tour for incoming freshmen', '3/18/2023');
+insert into Event (EventID, Description, EventDate) values (17, 'Financial aid information session', '4/30/2024');
+insert into Event (EventID, Description, EventDate) values (18, 'Meet and greet with college faculty', '4/25/2023');
+insert into Event (EventID, Description, EventDate) values (19, 'Application essay writing workshop', '9/1/2024');
+insert into Event (EventID, Description, EventDate) values (20, 'Panel discussion with current college students', '7/9/2024');
+insert into Event (EventID, Description, EventDate) values (21, 'Virtual information session for prospective students', '10/9/2023');
+insert into Event (EventID, Description, EventDate) values (22, 'College fair at local community center', '4/6/2024');
+insert into Event (EventID, Description, EventDate) values (23, 'Alumni networking event for recent graduates', '11/13/2025');
+insert into Event (EventID, Description, EventDate) values (24, 'Admissions workshop for parents and students', '5/12/2024');
+insert into Event (EventID, Description, EventDate) values (25, 'Campus tour for incoming freshmen', '5/18/2023');
+insert into Event (EventID, Description, EventDate) values (26, 'Panel discussion with current college students', '4/3/2024');
+insert into Event (EventID, Description, EventDate) values (27, 'College fair at local community center', '3/29/2024');
+insert into Event (EventID, Description, EventDate) values (28, 'Application essay writing workshop', '11/7/2023');
+insert into Event (EventID, Description, EventDate) values (29, 'Application essay writing workshop', '4/28/2023');
+insert into Event (EventID, Description, EventDate) values (30, 'Campus tour for incoming freshmen', '10/12/2023');
+insert into Event (EventID, Description, EventDate) values (31, 'Alumni networking event for recent graduates', '7/26/2023');
+insert into Event (EventID, Description, EventDate) values (32, 'Open house event for high school seniors', '3/16/2023');
+insert into Event (EventID, Description, EventDate) values (33, 'College fair at local community center', '3/14/2025');
+insert into Event (EventID, Description, EventDate) values (34, 'Virtual information session for prospective students', '5/8/2023');
+insert into Event (EventID, Description, EventDate) values (35, 'College fair at local community center', '1/18/2025');
+insert into Event (EventID, Description, EventDate) values (36, 'Application essay writing workshop', '11/14/2025');
+insert into Event (EventID, Description, EventDate) values (37, 'Financial aid information session', '7/26/2023');
+insert into Event (EventID, Description, EventDate) values (38, 'Alumni networking event for recent graduates', '5/15/2025');
+insert into Event (EventID, Description, EventDate) values (39, 'College fair at local community center', '12/29/2024');
+insert into Event (EventID, Description, EventDate) values (40, 'Alumni networking event for recent graduates', '7/8/2023');
+insert into Event (EventID, Description, EventDate) values (41, 'Alumni networking event for recent graduates', '9/3/2023');
+insert into Event (EventID, Description, EventDate) values (42, 'Meet and greet with college faculty', '8/16/2023');
+insert into Event (EventID, Description, EventDate) values (43, 'Campus tour for incoming freshmen', '11/5/2024');
+insert into Event (EventID, Description, EventDate) values (44, 'Open house event for high school seniors', '1/3/2024');
+insert into Event (EventID, Description, EventDate) values (45, 'Alumni networking event for recent graduates', '8/22/2023');
+insert into Event (EventID, Description, EventDate) values (46, 'Panel discussion with current college students', '12/6/2025');
+insert into Event (EventID, Description, EventDate) values (47, 'College fair at local community center', '7/14/2025');
+insert into Event (EventID, Description, EventDate) values (48, 'Open house event for high school seniors', '9/9/2025');
+insert into Event (EventID, Description, EventDate) values (49, 'Financial aid information session', '12/25/2023');
+insert into Event (EventID, Description, EventDate) values (50, 'Alumni networking event for recent graduates', '12/3/2025');
+insert into AttendsEvents (ApplicantID, EventID) values ('21', '36');
+insert into AttendsEvents (ApplicantID, EventID) values ('25', '25');
+insert into AttendsEvents (ApplicantID, EventID) values ('2', '1');
+insert into AttendsEvents (ApplicantID, EventID) values ('17', '4');
+insert into AttendsEvents (ApplicantID, EventID) values ('32', '43');
+insert into AttendsEvents (ApplicantID, EventID) values ('50', '7');
+insert into AttendsEvents (ApplicantID, EventID) values ('20', '12');
+insert into AttendsEvents (ApplicantID, EventID) values ('14', '28');
+insert into AttendsEvents (ApplicantID, EventID) values ('8', '29');
+insert into AttendsEvents (ApplicantID, EventID) values ('19', '13');
+insert into AttendsEvents (ApplicantID, EventID) values ('29', '27');
+insert into AttendsEvents (ApplicantID, EventID) values ('13', '33');
+insert into AttendsEvents (ApplicantID, EventID) values ('3', '2');
+insert into AttendsEvents (ApplicantID, EventID) values ('26', '49');
+insert into AttendsEvents (ApplicantID, EventID) values ('45', '48');
+insert into AttendsEvents (ApplicantID, EventID) values ('6', '3');
+insert into AttendsEvents (ApplicantID, EventID) values ('23', '22');
+insert into AttendsEvents (ApplicantID, EventID) values ('43', '14');
+insert into AttendsEvents (ApplicantID, EventID) values ('1', '10');
+insert into AttendsEvents (ApplicantID, EventID) values ('39', '50');
+insert into AttendsEvents (ApplicantID, EventID) values ('10', '5');
+insert into AttendsEvents (ApplicantID, EventID) values ('48', '47');
+insert into AttendsEvents (ApplicantID, EventID) values ('47', '46');
+insert into AttendsEvents (ApplicantID, EventID) values ('30', '16');
+insert into AttendsEvents (ApplicantID, EventID) values ('18', '11');
+insert into AttendsEvents (ApplicantID, EventID) values ('44', '8');
+insert into AttendsEvents (ApplicantID, EventID) values ('22', '40');
+insert into AttendsEvents (ApplicantID, EventID) values ('42', '41');
+insert into AttendsEvents (ApplicantID, EventID) values ('38', '6');
+insert into AttendsEvents (ApplicantID, EventID) values ('9', '37');
+insert into AttendsEvents (ApplicantID, EventID) values ('41', '35');
+insert into AttendsEvents (ApplicantID, EventID) values ('28', '21');
+insert into AttendsEvents (ApplicantID, EventID) values ('7', '20');
+insert into AttendsEvents (ApplicantID, EventID) values ('11', '24');
+insert into AttendsEvents (ApplicantID, EventID) values ('24', '30');
+insert into AttendsEvents (ApplicantID, EventID) values ('34', '42');
+insert into AttendsEvents (ApplicantID, EventID) values ('27', '15');
+insert into AttendsEvents (ApplicantID, EventID) values ('40', '17');
+insert into AttendsEvents (ApplicantID, EventID) values ('12', '23');
+insert into AttendsEvents (ApplicantID, EventID) values ('15', '44');
+insert into AttendsEvents (ApplicantID, EventID) values ('5', '39');
+insert into AttendsEvents (ApplicantID, EventID) values ('16', '19');
+insert into AttendsEvents (ApplicantID, EventID) values ('35', '38');
+insert into AttendsEvents (ApplicantID, EventID) values ('37', '32');
+insert into AttendsEvents (ApplicantID, EventID) values ('49', '26');
+insert into AttendsEvents (ApplicantID, EventID) values ('4', '31');
+insert into AttendsEvents (ApplicantID, EventID) values ('46', '34');
+insert into AttendsEvents (ApplicantID, EventID) values ('33', '9');
+insert into AttendsEvents (ApplicantID, EventID) values ('31', '18');
+insert into AttendsEvents (ApplicantID, EventID) values ('36', '45');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (1, '50', '439-755-4890', 'kcorsan0@vistaprint.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (2, '18', '573-380-9783', 'wcaghy1@devhub.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (3, '44', '813-317-0295', 'nrookes2@thetimes.co.uk');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (4, '12', '368-340-2279', 'stooby3@list-manage.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (5, '30', '679-583-5339', 'sjandel4@imdb.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (6, '24', '873-830-0191', 'cschiementz5@twitpic.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (7, '33', '889-678-2587', 'ffarlane6@ucsd.edu');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (8, '20', '494-405-8232', 'kcamerati7@fastcompany.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (9, '14', '712-427-6666', 'docaine8@google.co.jp');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (10, '49', '947-160-7524', 'sroyal9@goo.gl');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (11, '46', '389-119-2293', 'arytona@trellian.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (12, '22', '933-344-0436', 'hskillingtonb@example.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (13, '41', '471-445-6229', 'tfidginc@tuttocitta.it');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (14, '9', '574-518-2089', 'gambrusd@ted.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (15, '36', '240-981-9494', 'snialse@oaic.gov.au');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (16, '13', '480-349-1801', 'chillettf@webs.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (17, '21', '261-291-5196', 'nhigbing@msn.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (18, '47', '356-460-3995', 'lwhartonbyh@wunderground.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (19, '6', '816-633-9595', 'gmccurlyei@google.ru');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (20, '3', '973-189-0368', 'dsnyderj@state.tx.us');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (21, '4', '754-590-5505', 'pstanluckk@google.it');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (22, '42', '715-979-7860', 'wkerblerl@usnews.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (23, '39', '768-100-7416', 'dtraffordm@google.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (24, '32', '397-366-9357', 'apercyn@163.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (25, '23', '153-539-0299', 'dcarlesso@spiegel.de');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (26, '26', '618-687-6689', 'dlampenp@howstuffworks.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (27, '34', '492-382-0624', 'bgurdonq@tinyurl.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (28, '37', '601-410-8494', 'lwoolagerr@gov.uk');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (29, '35', '610-420-0262', 'egilbarts@t.co');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (30, '25', '476-301-0308', 'sgateclifft@shop-pro.jp');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (31, '40', '415-595-7994', 'gbitcheneru@last.fm');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (32, '28', '238-865-5065', 'lmcnerlinv@delicious.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (33, '48', '448-106-5974', 'atrippittw@liveinternet.ru');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (34, '31', '738-698-6774', 'wdennickx@google.co.jp');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (35, '2', '499-359-5139', 'smckenneyy@ucla.edu');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (36, '10', '634-366-9695', 'pruddlez@netlog.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (37, '45', '121-592-5723', 'bshave10@amazon.co.uk');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (38, '43', '790-746-7953', 'sghent11@sbwire.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (39, '5', '162-247-4208', 'pkarleman12@trellian.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (40, '38', '467-189-0566', 'ltremathack13@hexun.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (41, '11', '608-104-5383', 'aallans14@com.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (42, '8', '550-317-5503', 'rrutty15@toplist.cz');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (43, '16', '835-307-4168', 'rantonazzi16@icq.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (44, '17', '656-688-8329', 'mvoaden17@skyrock.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (45, '19', '347-533-5253', 'bzipsell18@yolasite.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (46, '1', '841-444-6399', 'wlafflin19@deviantart.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (47, '29', '474-121-6959', 'astarkie1a@nasa.gov');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (48, '27', '369-595-0560', 'jsinson1b@gmpg.org');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (49, '15', '487-730-7543', 'nfanner1c@gravatar.com');
+insert into Contact (ContactID, PersonID, PhoneNumber, EmailAddress) values (50, '7', '951-147-1721', 'iknevett1d@timesonline.co.uk');
+ALTER TABLE Deposit MODIFY COLUMN DatePaid VARCHAR(255);
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (1, '12', 90000, '4/26/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (2, '42', 100000, '1/26/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (3, '18', 40000, '9/16/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (4, '37', 20000, '2/16/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (5, '27', 90000, '2/2/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (6, '32', 90000, '8/4/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (7, '30', 60000, '1/30/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (8, '17', 10000, '4/30/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (9, '24', 20000, '12/15/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (10, '7', 10000, '3/6/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (11, '35', 50000, '9/9/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (12, '25', 90000, '12/3/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (13, '31', 70000, '3/19/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (14, '28', 60000, '4/4/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (15, '8', 60000, '12/29/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (16, '22', 90000, '4/29/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (17, '33', 100000, '2/5/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (18, '48', 90000, '11/2/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (19, '13', 100000, '12/7/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (20, '26', 30000, '4/12/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (21, '1', 20000, '7/8/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (22, '34', 50000, '3/4/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (23, '10', 10000, '1/18/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (24, '15', 30000, '5/2/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (25, '46', 100000, '8/6/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (26, '44', 60000, '11/26/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (27, '5', 20000, '7/6/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (28, '39', 60000, '11/23/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (29, '3', 40000, '3/17/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (30, '4', 40000, '8/19/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (31, '38', 30000, '11/17/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (32, '29', 30000, '9/29/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (33, '47', 50000, '7/5/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (34, '41', 30000, '6/28/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (35, '11', 50000, '6/26/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (36, '40', 80000, '5/6/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (37, '14', 10000, '7/9/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (38, '23', 30000, '11/11/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (39, '16', 50000, '10/14/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (40, '43', 80000, '5/12/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (41, '2', 50000, '10/31/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (42, '20', 30000, '9/3/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (43, '45', 40000, '1/27/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (44, '19', 50000, '7/1/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (45, '50', 30000, '11/25/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (46, '6', 70000, '3/26/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (47, '21', 10000, '3/30/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (48, '49', 20000, '10/10/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (49, '36', 100000, '6/26/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (50, '9', 40000, '11/22/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (51, '10', 90000, '5/13/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (52, '20', 80000, '10/10/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (53, '12', 20000, '2/12/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (54, '7', 40000, '11/15/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (55, '18', 90000, '4/26/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (56, '25', 60000, '4/1/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (57, '36', 50000, '7/29/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (58, '46', 10000, '9/12/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (59, '49', 50000, '1/30/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (60, '17', 50000, '8/10/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (61, '16', 30000, '12/28/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (62, '2', 70000, '8/24/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (63, '4', 100000, '9/25/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (64, '23', 80000, '12/29/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (65, '15', 30000, '12/11/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (66, '24', 50000, '12/1/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (67, '38', 20000, '9/14/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (68, '19', 50000, '7/7/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (69, '31', 30000, '4/26/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (70, '28', 70000, '4/4/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (71, '3', 10000, '6/27/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (72, '21', 20000, '4/21/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (73, '41', 10000, '12/9/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (74, '27', 70000, '11/6/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (75, '1', 90000, '10/11/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (76, '14', 80000, '3/29/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (77, '44', 90000, '8/2/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (78, '48', 70000, '12/31/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (79, '32', 100000, '7/29/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (80, '30', 60000, '7/18/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (81, '35', 20000, '6/12/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (82, '39', 20000, '8/7/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (83, '9', 90000, '5/4/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (84, '45', 70000, '1/13/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (85, '11', 50000, '10/7/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (86, '26', 10000, '1/15/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (87, '42', 40000, '12/8/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (88, '50', 60000, '12/15/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (89, '33', 20000, '8/20/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (90, '40', 60000, '4/1/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (91, '47', 20000, '10/21/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (92, '29', 90000, '1/14/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (93, '5', 20000, '3/11/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (94, '34', 40000, '9/18/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (95, '6', 20000, '6/25/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (96, '13', 100000, '7/11/2024');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (97, '22', 20000, '8/20/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (98, '37', 100000, '8/12/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (99, '43', 100000, '10/29/2025');
+insert into Deposit (DepositID, ApplicantID, Amount, DatePaid) values (100, '8', 20000, '7/20/2025');
+
+
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (1, '32', 'Essay or personal statement', 839956.13);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (2, '3', 'Participation in extracurricular activities', 371501.91);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (3, '5', 'Participation in extracurricular activities', 990415.17);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (4, '20', 'Proof of income below a certain threshold', 364775.56);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (5, '25', 'Participation in extracurricular activities', 719617.73);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (6, '24', 'First-generation college student', 702294.45);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (7, '33', 'First-generation college student', 498681.66);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (8, '28', 'Community service involvement', 828036.87);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (9, '18', 'Essay or personal statement', 205631.23);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (10, '34', 'Community service involvement', 731659.39);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (11, '43', 'Proof of income below a certain threshold', 466871.27);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (12, '41', 'Minority status', 231336.14);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (13, '49', 'Minority status', 322892.26);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (14, '35', 'Submission of FAFSA form', 606010.72);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (15, '39', 'Academic merit', 473697.81);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (16, '22', 'Submission of FAFSA form', 902965.12);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (17, '1', 'Minority status', 313043.5);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (18, '23', 'Demonstrated financial need', 418717.46);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (19, '2', 'Community service involvement', 544095.94);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (20, '26', 'Minority status', 646171.17);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (21, '31', 'First-generation college student', 728387.26);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (22, '12', 'Enrollment in specific program or major', 149602.45);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (23, '29', 'Community service involvement', 203571.1);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (24, '36', 'Submission of FAFSA form', 739787.6);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (25, '44', 'Minority status', 599167.61);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (26, '48', 'Demonstrated financial need', 88390.93);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (27, '13', 'Submission of FAFSA form', 100446.29);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (28, '19', 'Academic merit', 707244.3);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (29, '46', 'Academic merit', 675753.69);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (30, '45', 'Demonstrated financial need', 141003.43);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (31, '9', 'Proof of income below a certain threshold', 719985.08);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (32, '4', 'Essay or personal statement', 961169.23);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (33, '38', 'Proof of income below a certain threshold', 278559.32);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (34, '8', 'Enrollment in specific program or major', 847981.24);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (35, '7', 'Essay or personal statement', 723439.06);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (36, '6', 'Enrollment in specific program or major', 940680.31);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (37, '17', 'Proof of income below a certain threshold', 731799.1);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (38, '30', 'Academic merit', 640641.96);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (39, '42', 'Essay or personal statement', 875645.72);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (40, '27', 'First-generation college student', 56183.06);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (41, '47', 'Essay or personal statement', 419530.45);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (42, '10', 'Academic merit', 413412.95);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (43, '37', 'Minority status', 382590.49);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (44, '14', 'Demonstrated financial need', 727202.14);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (45, '11', 'First-generation college student', 660306.04);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (46, '40', 'Community service involvement', 453348.1);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (47, '50', 'Essay or personal statement', 866132.62);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (48, '15', 'Community service involvement', 299844.98);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (49, '21', 'Submission of FAFSA form', 448040.42);
+insert into FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount) values (50, '16', 'Proof of income below a certain threshold', 579983.25);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (1, '38', 32000, 6400);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (2, '26', 75000, 5600);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (3, '48', 60000, 3800);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (4, '44', 67000, 3000);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (5, '46', 90000, 4200);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (6, '42', 60000, 9100);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (7, '15', 75000, 5000);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (8, '23', 32000, 4800);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (9, '19', 48000, 4200);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (10, '25', 32000, 6400);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (11, '43', 60000, 7500);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (12, '16', 50000, 3800);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (13, '33', 48000, 3800);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (14, '40', 48000, 9100);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (15, '39', 60000, 8200);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (16, '24', 48000, 6400);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (17, '45', 58000, 6400);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (18, '11', 67000, 4800);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (19, '7', 90000, 8200);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (20, '29', 42000, 9100);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (21, '32', 53000, 7500);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (22, '20', 75000, 9100);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (23, '18', 42000, 5600);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (24, '17', 50000, 6400);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (25, '41', 42000, 3000);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (26, '31', 58000, 7500);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (27, '8', 58000, 8200);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (28, '6', 48000, 4200);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (29, '13', 53000, 6400);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (30, '37', 32000, 5600);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (31, '12', 53000, 7500);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (32, '21', 67000, 6400);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (33, '14', 53000, 9100);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (34, '35', 67000, 4200);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (35, '9', 90000, 5000);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (36, '28', 60000, 4800);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (37, '2', 60000, 4800);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (38, '4', 90000, 4200);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (39, '36', 32000, 6400);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (40, '47', 32000, 4800);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (41, '5', 32000, 4800);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (42, '1', 58000, 7500);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (43, '49', 75000, 9100);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (44, '10', 53000, 7500);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (45, '50', 90000, 4200);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (46, '3', 58000, 3800);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (47, '22', 67000, 6400);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (48, '30', 32000, 5600);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (49, '27', 32000, 8200);
+insert into FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes) values (50, '34', 67000, 5600);
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (952986776, '25', '#1c4');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (97876631, '6', '#181');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (958870349, '38', '#ea0');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (366579849, '7', '#bbd');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (78603104, '13', '#d6f');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1825353002, '39', '#30f');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (2016599240, '49', '#c0f');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (477056948, '46', '#7a7');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (998214020, '15', '#3fb');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (328663121, '31', '#88e');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1328268470, '14', '#db4');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (510508050, '48', '#fe3');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1574018510, '22', '#38e');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1315299638, '3', '#dff');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (2119531340, '33', '#9f1');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1656395519, '43', '#71b');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (146054873, '17', '#30f');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1194653715, '24', '#d5a');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (192082363, '45', '#854');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (573337923, '32', '#153');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (83369086, '9', '#9a4');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1144340443, '19', '#d82');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (2055134887, '11', '#25d');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (793204091, '40', '#337');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (997635017, '18', '#456');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (2095614540, '23', '#416');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1478712401, '42', '#cd0');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1330940082, '21', '#1c7');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (226682711, '5', '#762');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (417294516, '37', '#5bd');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1467396585, '30', '#0d9');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (315967218, '34', '#670');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1722889339, '44', '#bc9');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1513892531, '41', '#7d7');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1390242866, '28', '#f78');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1231128862, '12', '#c13');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1504944779, '27', '#e06');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (438012682, '26', '#f02');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1752183295, '8', '#aef');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1524935916, '36', '#9b2');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1573831335, '20', '#5b0');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (775003734, '29', '#c71');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1423018523, '50', '#dcc');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1086809687, '47', '#525');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1838435584, '16', '#5cc');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (503783847, '10', '#fa6');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1399003955, '1', '#6ed');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (38623875, '4', '#212');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (1783235861, '35', '#c2d');
+insert into GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool) values (721926986, '2', '#1e3');
+insert into isApplicant (ApplicantID, PersonID) values ('6', '1');
+insert into isApplicant (ApplicantID, PersonID) values ('12', '38');
+insert into isApplicant (ApplicantID, PersonID) values ('22', '3');
+insert into isApplicant (ApplicantID, PersonID) values ('39', '41');
+insert into isApplicant (ApplicantID, PersonID) values ('3', '42');
+insert into isApplicant (ApplicantID, PersonID) values ('11', '5');
+insert into isApplicant (ApplicantID, PersonID) values ('28', '2');
+insert into isApplicant (ApplicantID, PersonID) values ('35', '22');
+insert into isApplicant (ApplicantID, PersonID) values ('30', '13');
+insert into isApplicant (ApplicantID, PersonID) values ('21', '12');
+insert into isApplicant (ApplicantID, PersonID) values ('34', '18');
+insert into isApplicant (ApplicantID, PersonID) values ('2', '29');
+insert into isApplicant (ApplicantID, PersonID) values ('29', '37');
+insert into isApplicant (ApplicantID, PersonID) values ('31', '48');
+insert into isApplicant (ApplicantID, PersonID) values ('32', '33');
+insert into isApplicant (ApplicantID, PersonID) values ('43', '8');
+insert into isApplicant (ApplicantID, PersonID) values ('44', '15');
+insert into isApplicant (ApplicantID, PersonID) values ('37', '10');
+insert into isApplicant (ApplicantID, PersonID) values ('50', '6');
+insert into isApplicant (ApplicantID, PersonID) values ('8', '45');
+insert into isApplicant (ApplicantID, PersonID) values ('46', '25');
+insert into isApplicant (ApplicantID, PersonID) values ('26', '27');
+insert into isApplicant (ApplicantID, PersonID) values ('23', '20');
+insert into isApplicant (ApplicantID, PersonID) values ('15', '30');
+insert into isApplicant (ApplicantID, PersonID) values ('41', '21');
+insert into isApplicant (ApplicantID, PersonID) values ('19', '36');
+insert into isApplicant (ApplicantID, PersonID) values ('1', '11');
+insert into isApplicant (ApplicantID, PersonID) values ('25', '19');
+insert into isApplicant (ApplicantID, PersonID) values ('48', '9');
+insert into isApplicant (ApplicantID, PersonID) values ('9', '7');
+insert into isApplicant (ApplicantID, PersonID) values ('24', '23');
+insert into isApplicant (ApplicantID, PersonID) values ('42', '24');
+insert into isApplicant (ApplicantID, PersonID) values ('5', '46');
+insert into isApplicant (ApplicantID, PersonID) values ('18', '28');
+insert into isApplicant (ApplicantID, PersonID) values ('47', '32');
+insert into isApplicant (ApplicantID, PersonID) values ('38', '35');
+insert into isApplicant (ApplicantID, PersonID) values ('40', '40');
+insert into isApplicant (ApplicantID, PersonID) values ('33', '26');
+insert into isApplicant (ApplicantID, PersonID) values ('4', '44');
+insert into isApplicant (ApplicantID, PersonID) values ('20', '4');
+insert into isApplicant (ApplicantID, PersonID) values ('10', '43');
+insert into isApplicant (ApplicantID, PersonID) values ('36', '34');
+insert into isApplicant (ApplicantID, PersonID) values ('49', '47');
+insert into isApplicant (ApplicantID, PersonID) values ('45', '50');
+insert into isApplicant (ApplicantID, PersonID) values ('16', '31');
+insert into isApplicant (ApplicantID, PersonID) values ('13', '14');
+insert into isApplicant (ApplicantID, PersonID) values ('14', '39');
+insert into isApplicant (ApplicantID, PersonID) values ('27', '16');
+insert into isApplicant (ApplicantID, PersonID) values ('7', '17');
+insert into isApplicant (ApplicantID, PersonID) values ('17', '49');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('565878348', '2');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('2091129208', '19');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('564601112', '26');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('996593668', '48');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1910236217', '11');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('371421244', '1');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('482975308', '24');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1053487951', '31');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('7869449', '15');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('628290860', '17');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('729337753', '40');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('30358770', '7');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('300836671', '46');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('37284891', '47');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('2042914671', '28');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('17384849', '21');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1568006923', '33');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('870737936', '37');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1862952405', '43');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1195470701', '35');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1806907873', '36');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1951664230', '45');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1975728602', '29');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1792569796', '13');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('585825655', '32');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('753309918', '5');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('278613721', '34');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('575126074', '18');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('596340223', '9');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1676366997', '22');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('141463877', '41');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1752821892', '3');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1117198452', '25');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1996662616', '10');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('686987445', '16');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1219581487', '12');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('754975483', '44');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1804943624', '39');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1504299267', '6');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('436360375', '50');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('2048022662', '42');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('641705766', '27');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1056181021', '4');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1715404729', '14');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1668146506', '8');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('781404917', '20');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1188280096', '38');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1309518939', '23');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('1982170055', '30');
+insert into isGuidanceCounsellor (GuidanceCounsellorID, PersonID) values ('106009575', '49');
+ALTER TABLE Person Modify column DOB VARCHAR(225);
+insert into Person (PersonID, Name, DOB, Type) values (1, 'Aida', '12/1/1908', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (2, 'Hermie', '11/15/1970', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (3, 'Casey', '1/3/1978', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (4, 'Sydel', '7/13/1940', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (5, 'Anita', '1/16/1964', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (6, 'Ross', '6/26/1997', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (7, 'Wynn', '9/27/1994', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (8, 'Marcelo', '9/17/1963', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (9, 'Simone', '8/27/1908', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (10, 'Yance', '2/18/1986', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (11, 'Silvano', '11/12/1961', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (12, 'Shelly', '11/25/1957', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (13, 'Somerset', '4/30/1974', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (14, 'Boone', '1/7/1931', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (15, 'Cynde', '10/17/1995', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (16, 'Tildy', '11/30/1913', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (17, 'Claudell', '5/15/1947', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (18, 'Odilia', '12/30/2019', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (19, 'Francesco', '10/3/1937', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (20, 'Ivie', '3/11/1910', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (21, 'Daphne', '3/10/1951', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (22, 'Jennifer', '11/10/1985', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (23, 'Hildy', '3/19/1986', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (24, 'Cornelle', '7/25/1941', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (25, 'Theresita', '12/19/1964', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (26, 'Rana', '2/26/1937', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (27, 'Ted', '11/24/1968', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (28, 'Dayle', '5/10/1976', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (29, 'Mindy', '10/5/2019', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (30, 'Myrwyn', '1/6/1963', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (31, 'Hazlett', '9/30/2005', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (32, 'Leta', '6/15/2011', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (33, 'Rodolfo', '10/15/1961', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (34, 'Lacy', '1/7/1985', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (35, 'Ines', '12/18/1908', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (36, 'Franklyn', '4/18/2019', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (37, 'Elwood', '8/21/1980', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (38, 'Christy', '10/15/1947', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (39, 'Shurlocke', '5/16/1919', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (40, 'Mordecai', '4/25/1903', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (41, 'West', '9/7/2009', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (42, 'Edeline', '12/14/1962', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (43, 'Luce', '2/14/2008', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (44, 'Dougie', '4/26/1989', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (45, 'Horton', '1/22/1995', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (46, 'Peterus', '11/27/1958', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (47, 'Benedetto', '1/23/1947', 'Applicant');
+insert into Person (PersonID, Name, DOB, Type) values (48, 'Farris', '1/5/1964', 'Guidance Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (49, 'Emilio', '9/21/1965', 'Admissions Counsellor');
+insert into Person (PersonID, Name, DOB, Type) values (50, 'Constancia', '11/17/1987', 'Admissions Counsellor');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (1, '46', 'Academic Excellence Scholarship', 70000, 'Participation in a leadership program');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (2, '27', 'Innovation and Technology Scholarship', 30000, 'Interest in pursuing a career in healthcare');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (3, '14', 'Environmental Sustainability Scholarship', 35000, 'Interest in pursuing a career in healthcare');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (4, '39', 'Environmental Sustainability Scholarship', 30000, 'Minimum of 50 hours of volunteer work');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (5, '47', 'Health and Wellness Scholarship', 70000, 'Essay submission');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (6, '31', 'Creative Arts Scholarship', 45000, 'Participation in a leadership program');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (7, '9', 'Health and Wellness Scholarship', 10000, 'Minimum of 50 hours of volunteer work');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (8, '42', 'Entrepreneurship Scholarship', 35000, 'Participation in community service activities');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (9, '20', 'Entrepreneurship Scholarship', 80000, 'Minimum of 50 hours of volunteer work');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (10, '16', 'Innovation and Technology Scholarship', 35000, 'Member of a minority group');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (11, '28', 'Community Service Scholarship', 35000, 'Participation in a leadership program');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (12, '24', 'Health and Wellness Scholarship', 75000, 'Enrolled in a STEM program');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (13, '34', 'Health and Wellness Scholarship', 35000, 'GPA of 3.5 or higher');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (14, '38', 'Creative Arts Scholarship', 80000, 'GPA of 3.5 or higher');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (15, '25', 'Innovation and Technology Scholarship', 75000, 'Minimum of 50 hours of volunteer work');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (16, '37', 'Diversity and Inclusion Scholarship', 35000, 'Recommendation letter from a teacher');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (17, '1', 'Academic Excellence Scholarship', 60000, 'Essay submission');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (18, '8', 'Academic Excellence Scholarship', 45000, 'Demonstrated financial need');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (19, '36', 'Entrepreneurship Scholarship', 75000, 'Interest in pursuing a career in healthcare');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (20, '18', 'Entrepreneurship Scholarship', 50000, 'Recommendation letter from a teacher');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (21, '5', 'Diversity and Inclusion Scholarship', 10000, 'Minimum of 50 hours of volunteer work');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (22, '13', 'Diversity and Inclusion Scholarship', 45000, 'GPA of 3.5 or higher');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (23, '49', 'Innovation and Technology Scholarship', 50000, 'Minimum of 50 hours of volunteer work');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (24, '26', 'Future Leaders Scholarship', 75000, 'Interest in pursuing a career in healthcare');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (25, '40', 'Academic Excellence Scholarship', 80000, 'Member of a minority group');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (26, '29', 'Health and Wellness Scholarship', 10000, 'Enrolled in a STEM program');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (27, '10', 'Innovation and Technology Scholarship', 30000, 'Demonstrated financial need');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (28, '50', 'Environmental Sustainability Scholarship', 10000, 'Recommendation letter from a teacher');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (29, '32', 'Diversity and Inclusion Scholarship', 70000, 'Minimum of 50 hours of volunteer work');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (30, '43', 'Community Service Scholarship', 30000, 'Minimum of 50 hours of volunteer work');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (31, '11', 'Diversity and Inclusion Scholarship', 45000, 'Demonstrated financial need');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (32, '2', 'Diversity and Inclusion Scholarship', 80000, 'GPA of 3.5 or higher');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (33, '15', 'Diversity and Inclusion Scholarship', 10000, 'Demonstrated financial need');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (34, '6', 'Global Citizenship Scholarship', 10000, 'Participation in a leadership program');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (35, '12', 'Future Leaders Scholarship', 75000, 'Essay submission');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (36, '44', 'Global Citizenship Scholarship', 80000, 'GPA of 3.5 or higher');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (37, '17', 'Future Leaders Scholarship', 70000, 'Interest in pursuing a career in healthcare');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (38, '7', 'Diversity and Inclusion Scholarship', 60000, 'Participation in community service activities');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (39, '3', 'Academic Excellence Scholarship', 35000, 'Interest in pursuing a career in healthcare');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (40, '19', 'Community Service Scholarship', 45000, 'Interest in pursuing a career in healthcare');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (41, '23', 'Academic Excellence Scholarship', 70000, 'Demonstrated financial need');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (42, '48', 'Global Citizenship Scholarship', 25000, 'Enrolled in a STEM program');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (43, '21', 'Future Leaders Scholarship', 35000, 'Essay submission');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (44, '30', 'Health and Wellness Scholarship', 10000, 'Interest in pursuing a career in healthcare');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (45, '41', 'Future Leaders Scholarship', 35000, 'Member of a minority group');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (46, '22', 'Creative Arts Scholarship', 80000, 'Participation in community service activities');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (47, '45', 'Entrepreneurship Scholarship', 70000, 'Recommendation letter from a teacher');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (48, '35', 'Creative Arts Scholarship', 35000, 'Participation in community service activities');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (49, '33', 'Creative Arts Scholarship', 50000, 'Interest in pursuing a career in healthcare');
+insert into Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) values (50, '4', 'Innovation and Technology Scholarship', 70000, 'Essay submission');
+ALTER TABLE Survey MODIFY COLUMN SubmissionDate VARCHAR(255);
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (1, '20', '1/18/2024', 'Could use more clarity on the program requirements.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (2, '40', '8/24/2024', 'Impressed with the level of professionalism.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (3, '14', '12/1/2024', 'a positive experience with the admissions team.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (4, '17', '9/11/2025', 'Great communication throughout the process.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (5, '46', '5/28/2025', 'Appreciate the prompt responses to my inquiries.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (6, '45', '7/9/2025', 'Impressed with the level of professionalism.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (7, '35', '12/21/2025', 'Appreciate the prompt responses to my inquiries.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (8, '23', '2/25/2025', 'thank you!');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (9, '50', '12/7/2024', 'Great communication throughout the process.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (10, '31', '4/22/2024', 'Appreciate the prompt responses to my inquiries.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (11, '16', '11/13/2025', 'Thank you for the opportunity to interview for the program.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (12, '37', '3/13/2025', 'Appreciate the prompt responses to my inquiries.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (13, '4', '4/22/2025', 'Very informative presentation');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (14, '47', '9/24/2025', 'Could use more clarity on the program requirements.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (15, '9', '2/13/2025', 'Looking forward to starting my studies at the university.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (16, '48', '8/25/2025', 'Impressed with the level of professionalism.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (17, '44', '6/9/2024', 'Overall');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (18, '49', '9/21/2025', 'Thank you for the opportunity to interview for the program.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (19, '33', '11/12/2025', 'Found the application process to be straightforward.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (20, '25', '5/26/2025', 'Found the application process to be straightforward.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (21, '34', '2/5/2024', 'Very informative presentation');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (22, '2', '11/28/2024', 'Could use more clarity on the program requirements.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (23, '27', '2/10/2025', 'Very informative presentation');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (24, '24', '10/18/2025', 'Looking forward to starting my studies at the university.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (25, '6', '5/31/2024', 'Impressed with the level of professionalism.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (26, '5', '11/22/2024', 'Looking forward to starting my studies at the university.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (27, '39', '5/16/2024', 'Appreciate the prompt responses to my inquiries.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (28, '3', '11/7/2025', 'Impressed with the level of professionalism.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (29, '10', '3/13/2025', 'a positive experience with the admissions team.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (30, '32', '7/28/2024', 'a positive experience with the admissions team.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (31, '15', '5/24/2025', 'Impressed with the level of professionalism.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (32, '19', '12/1/2024', 'Would like to see more diversity in the student body.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (33, '26', '11/18/2025', 'Could use more clarity on the program requirements.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (34, '29', '2/18/2024', 'a positive experience with the admissions team.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (35, '21', '10/1/2025', 'Impressed with the level of professionalism.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (36, '18', '9/8/2024', 'Could use more clarity on the program requirements.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (37, '1', '10/13/2024', 'a positive experience with the admissions team.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (38, '30', '12/2/2024', 'Impressed with the level of professionalism.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (39, '7', '6/9/2024', 'Looking forward to starting my studies at the university.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (40, '36', '3/18/2025', 'Great communication throughout the process.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (41, '22', '9/8/2025', 'Overall');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (42, '43', '7/9/2024', 'Impressed with the level of professionalism.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (43, '41', '1/7/2025', 'Would like to see more diversity in the student body.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (44, '28', '6/7/2025', 'Thank you for the opportunity to interview for the program.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (45, '13', '5/11/2025', 'Great communication throughout the process.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (46, '38', '10/31/2024', 'Overall');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (47, '8', '5/12/2025', 'Great communication throughout the process.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (48, '42', '10/22/2024', 'Impressed with the level of professionalism.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (49, '11', '7/19/2024', 'Could use more clarity on the program requirements.');
+insert into Survey (SurveyID, ApplicantID, SubmissionDate, Feedback) values (50, '12', '8/17/2025', 'Thank you for the opportunity to interview for the program.');
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (1, '4', ' ', 'Rejected', '1668146506', '2042914671', 1, 1, 1, 1);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (2, '6', '11/10/2012', 'Accepted', '17384849', '1117198452', 2, 2, 2, 2);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (3, '7', '8/2/2002', 'Accepted', '641705766', '7869449', 3, 3, 3, 3);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (4, '27', '6/9/2021', 'Rejected', '628290860', '585825655', 4, 4, 4, 4);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (5, '16', '10/31/2014', 'Accepted', '1715404729', '575126074', 5, 5, 5, 5);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (6, '8', '3/25/2022', 'Accepted', '1752821892', '1982170055', 6, 6, 6, 6);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (7, '31', '11/13/2004', 'Rejected', '1504299267', '106009575', 7, 7, 7, 7);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (8, '34', '11/30/2012', 'Accepted', '37284891', '278613721', 8, 8, 8, 8);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (9, '36', '8/4/2008', 'Rejected', '754975483', '1806907873', 9, 9, 9, 9);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (10, '30', '7/12/2015', 'Accepted', '1056181021', '2091129208', 10, 10, 10, 10);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (11, '20', '3/7/2004', 'Accepted', '1910236217', '1053487951', 11, 11, 11, 11);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (12, '26', '1/31/2009', 'Submitted', '686987445', '1504299267', 12, 12, 12, 12);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (13, '1', '7/20/2004', 'Accepted', '1676366997', '1752821892', 13, 13, 13, 13);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (14, '50', '2/11/2018', 'Accepted', '278613721', '641705766', 14, 14, 14, 14);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (15, '42', '2/17/2008', 'Submitted', '300836671', '564601112', 15, 15, 15, 15);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (16, '12', '8/16/2013', 'Rejected', '106009575', '1219581487', 16, 16, 16, 16);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (17, '14', '8/23/2021', 'Accepted', '2042914671', '436360375', 17, 17, 17, 17);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (18, '39', '7/24/2021', 'Accepted', '141463877', '300836671', 18, 18, 18, 18);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (19, '29', '3/1/2010', 'Rejected', '585825655', '729337753', 19, 19, 19, 19);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (20, '25', '1/23/2007', 'Submitted', '565878348', '1309518939', 20, 20, 20, 20);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (21, '49', '3/12/2020', 'Accepted', '30358770', '482975308', 21, 21, 21, 21);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (22, '24', '12/8/2004', 'Submitted', '781404917', '37284891', 22, 22, 22, 22);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (23, '5', '6/30/2012', 'Rejected', '2091129208', '371421244', 23, 23, 23, 23);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (24, '48', '11/21/2005', 'Rejected', '1806907873', '1910236217', 24, 24, 24, 24);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (25, '11', '2/5/2001', 'Accepted', '1982170055', '30358770', 25, 25, 25, 25);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (26, '38', '11/5/2010', 'Rejected', '1862952405', '1715404729', 26, 26, 26, 26);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (27, '41', '6/30/2020', 'Rejected', '2048022662', '141463877', 27, 27, 27, 27);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (28, '32', '8/4/2020', 'Accepted', '1188280096', '1195470701', 28, 28, 28, 28);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (29, '45', '1/18/2017', 'Rejected', '1996662616', '1676366997', 29, 29, 29, 29);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (30, '9', '3/10/2004', 'Rejected', '870737936', '1975728602', 30, 30, 30, 30);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (31, '13', '2/13/2003', 'Accepted', '1195470701', '565878348', 31, 31, 31, 31);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (32, '28', '8/21/2000', 'Rejected', '482975308', '870737936', 32, 32, 32, 32);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (33, '2', '8/16/2007', 'Rejected', '575126074', '1792569796', 33, 33, 33, 33);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (34, '40', '9/30/2016', 'Rejected', '371421244', '1951664230', 34, 34, 34, 34);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (35, '23', '2/13/2015', 'Rejected', '753309918', '996593668', 35, 35, 35, 35);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (36, '46', '6/5/2003', 'Rejected', '564601112', '1568006923', 36, 36, 36, 36);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (37, '17', '2/7/2018', 'Accepted', '1975728602', '1862952405', 37, 37, 37, 37);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (38, '35', '9/12/2017', 'Accepted', '1792569796', '1056181021', 38, 38, 38, 38);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (39, '21', '1/4/2009', 'Accepted', '436360375', '1804943624', 39, 39, 39, 39);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (40, '33', '5/29/2004', 'Rejected', '1053487951', '1668146506', 40, 40, 40, 40);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (41, '10', '11/12/2014', 'Accepted', '1951664230', '753309918', 41, 41, 41, 41);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (42, '22', '7/23/2011', 'Rejected', '1309518939', '1188280096', 42, 42, 42, 42);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (43, '47', '7/15/2012', 'Rejected', '1117198452', '1996662616', 43, 43, 43, 43);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (44, '18', '10/12/2001', 'Rejected', '1804943624', '17384849', 44, 44, 44, 44);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (45, '15', '11/4/2008', 'Rejected', '596340223', '754975483', 45, 45, 45, 45);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (46, '43', '10/31/2011', 'Submitted', '729337753', '686987445', 46, 46, 46, 46);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (47, '44', '7/24/2001', 'Submitted', '1568006923', '596340223', 47, 47, 47, 47);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (48, '37', '11/10/2013', 'Rejected', '1219581487', '781404917', 48, 48, 48, 48);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (49, '19', '6/20/2004', 'Accepted', '996593668', '628290860', 49, 49, 49, 49);
+insert into Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, AdmissionsOfficerID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) values (50, '3', '3/13/2002', 'Submitted', '7869449', '2048022662', 50, 50, 50, 50);
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (1, '13', 'mi sit amet lobortis sapien sapien non mi integer ac', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (2, '19', 'donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (3, '41', 'dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (4, '29', 'id consequat in consequat ut nulla sed accumsan felis ut at', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (5, '34', 'nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (6, '23', 'suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (7, '50', 'aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (8, '27', 'et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (9, '15', 'integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (10, '31', 'consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (11, '37', 'tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (12, '17', 'tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (13, '33', 'ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (14, '8', 'lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (15, '36', 'in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (16, '21', 'ac consequat metus sapien ut nunc vestibulum ante ipsum primis', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (17, '9', 'vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (18, '25', 'libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (19, '40', 'consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (20, '42', 'eget eleifend luctus ultricies eu nibh quisque id justo sit amet', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (21, '16', 'sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (22, '49', 'lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (23, '30', 'non mauris morbi non lectus aliquam sit amet diam in magna', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (24, '22', 'maecenas tincidunt lacus at velit vivamus vel nulla eget eros', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (25, '10', 'magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (26, '6', 'justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (27, '20', 'turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (28, '35', 'rutrum neque aenean auctor gravida sem praesent id massa id', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (29, '32', 'lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (30, '39', 'molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (31, '38', 'integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (32, '11', 'mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (33, '7', 'curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (34, '14', 'congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (35, '44', 'aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (36, '12', 'arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (37, '47', 'in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (38, '46', 'vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (39, '4', 'eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (40, '45', 'erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (41, '26', 'id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (42, '28', 'ultrices posuere cubilia curae nulla dapibus dolor vel est donec', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (43, '1', 'nam dui proin leo odio porttitor id consequat in consequat ut nulla', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (44, '5', 'pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (45, '2', 'nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (46, '18', 'imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (47, '48', 'hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (48, '43', 'amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante', 'Complete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (49, '24', 'dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non', 'Incomplete');
+insert into Checklist (ChecklistID, ApplicationID, Description, Status) values (50, '3', 'malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem', 'Complete');
+
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (1, '6', 'Letter of recommendation', '5/10/2007', '33');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (2, '40', 'Personal statement', '9/27/2005', '26');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (3, '8', 'Personal statement', '9/14/2020', '28');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (4, '31', 'Personal statement', '8/31/2018', '49');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (5, '37', 'Proof of English proficiency', '8/14/2009', '45');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (6, '43', 'Letter of recommendation', '8/29/2020', '18');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (7, '22', 'Proof of vaccination', '4/13/2005', '41');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (8, '35', 'Proof of English proficiency', '9/7/2009', '47');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (9, '28', 'Resume', '7/11/2001', '13');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (10, '30', 'Proof of English proficiency', '5/30/2008', '1');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (11, '27', 'Personal statement', '3/27/2011', '7');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (12, '50', 'Medical history form', '7/26/2008', '40');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (13, '20', 'Essay', '11/14/2006', '2');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (14, '17', 'Essay', '4/13/2005', '10');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (15, '45', 'Proof of vaccination', '5/29/2014', '6');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (16, '5', 'Proof of vaccination', '7/31/2021', '12');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (17, '36', 'High school transcript', '9/20/2006', '39');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (18, '11', 'High school transcript', '2/21/2017', '44');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (19, '18', 'Medical history form', '2/10/2011', '19');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (20, '23', 'Copy of passport', '2/25/2000', '11');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (21, '13', 'Resume', '6/25/2022', '42');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (22, '9', 'Essay', '9/24/2019', '17');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (23, '10', 'Proof of English proficiency', '1/26/2005', '16');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (24, '19', 'Copy of passport', '7/15/2005', '25');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (25, '21', 'Essay', '9/28/2007', '15');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (26, '44', 'Resume', '11/22/2001', '29');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (27, '38', 'Copy of passport', '12/6/2012', '9');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (28, '7', 'Resume', '4/14/2016', '46');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (29, '15', 'Medical history form', '12/31/2001', '38');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (30, '16', 'Resume', '7/13/2019', '27');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (31, '34', 'High school transcript', '3/9/2018', '35');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (32, '2', 'Essay', '10/31/2017', '34');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (33, '46', 'Medical history form', '11/3/2003', '32');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (34, '47', 'Copy of passport', '11/20/2005', '43');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (35, '48', 'Proof of English proficiency', '5/7/2017', '50');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (36, '39', 'Financial statement', '8/15/2014', '36');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (37, '33', 'Essay', '12/31/2014', '5');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (38, '42', 'Personal statement', '5/5/2012', '24');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (39, '24', 'Copy of passport', '8/13/2019', '48');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (40, '12', 'Proof of vaccination', '11/13/2010', '4');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (41, '25', 'Resume', '5/19/2011', '14');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (42, '4', 'Personal statement', '12/10/2018', '30');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (43, '41', 'Medical history form', '4/26/2016', '37');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (44, '3', 'Proof of vaccination', '5/19/2017', '3');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (45, '1', 'Resume', '10/21/2007', '31');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (46, '14', 'Essay', '12/13/2013', '8');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (47, '32', 'Copy of passport', '12/30/2003', '20');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (48, '29', 'High school transcript', '7/19/2004', '21');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (49, '49', 'Essay', '5/6/2005', '22');
+insert into Document (DocumentID, ApplicationID, DocumentType, UploadDate, ChecklistID) values (50, '26', 'Proof of vaccination', '6/17/2005', '23');
 
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (1, 45, 'odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia', 837310910, 868801349, 844062302);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (2, 43, 'maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque', 591072479, 780426706, 639748235);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (3, 7, 'euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis', 5828302, 989699173, 151906597);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (4, 39, 'ante ipsum primis in faucibus orci luctus et ultrices posuere', 170410876, 598580082, 686501173);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (5, 14, 'ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vita', 285762063, 107203681, 964546836);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (6, 20, 'nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accum', 956909021, 207825152, 786278305);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (7, 16, 'in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam', 214508511, 636475431, 583455436);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (8, 35, 'augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elem', 914388191, 465685967, 516685324);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (9, 11, 'feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imper', 607018395, 686000397, 646388613);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (10, 43, 'in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nasc', 499397388, 753162584, 918894793);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (11, 41, 'donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultric', 159024360, 82572139, 276708040);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (12, 23, 'mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu ni', 684362137, 320397112, 966151793);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (13, 48, 'ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est d', 99935623, 672374411, 80005181);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (14, 20, 'in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae', 326234238, 617084189, 224578086);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (15, 5, 'varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mat', 3619028, 746567609, 154214846);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (16, 17, 'ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque', 943175377, 456433080, 944657735);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (17, 42, 'in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis', 313030688, 742759571, 433665079);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (18, 46, 'at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rut', 446822039, 699404398, 51564032);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (19, 3, 'ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo', 21697170, 79319187, 632318723);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (20, 25, 'erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper', 335323563, 48893424, 99839088);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (21, 7, 'vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia', 818169601, 486334931, 795825646);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (22, 17, 'sed interdum venenatis turpis enim blandit mi in porttitor pede', 462911356, 566133419, 654800194);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (23, 17, 'nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat', 619118608, 265566445, 317712880);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (24, 26, 'suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis ', 99213664, 78285128, 254059910);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (25, 11, 'ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit', 415294650, 790337893, 478972415);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (26, 40, 'justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan to', 410712542, 984148841, 767010941);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (27, 19, 'luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet', 163122975, 53785400, 995657692);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (28, 13, 'dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nun', 258979989, 604590, 774306403);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (29, 45, 'suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mau', 946832832, 234139281, 341104236);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (30, 50, 'platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis', 270761922, 568671559, 224570280);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (31, 3, 'amet nulla quisque arcu libero rutrum ac lobortis vel dapibus', 509664298, 384182467, 974296282);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (32, 2, 'libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis', 714601160, 189180720, 226683896);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (33, 22, 'donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam', 791140359, 376360498, 925044731);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (34, 46, 'quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus', 77927428, 372769885, 294383424);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (35, 38, 'vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucib', 661581111, 724559301, 363444184);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (36, 49, 'ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer', 66029657, 859775927, 714740145);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (37, 17, 'odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lect', 505729071, 132826780, 886480359);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (38, 35, 'orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna', 9920862, 643052050, 988678832);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (39, 34, 'congue eget semper rutrum nulla nunc purus phasellus in felis donec semper', 987676785, 146308549, 209444511);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (40, 14, 'lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur', 267705819, 691572981, 565895110);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (41, 6, 'lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet', 883230996, 967097717, 883149408);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (42, 16, 'vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucib', 253316844, 981207954, 539864324);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (43, 48, 'nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in', 81043770, 613211821, 196624603);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (44, 43, 'adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien', 116114788, 4730523, 158473288);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (45, 30, 'morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit', 542477526, 625056441, 677563171);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (46, 25, 'maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cra', 547666213, 599244900, 589179780);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (47, 47, 'turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis al', 260690522, 338088508, 991667375);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (48, 8, 'lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur', 22023798, 314385755, 85148854);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (49, 15, 'ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam', 185153634, 124831382, 320002260);
-
-INSERT INTO UniGate.Applicant (ApplicantID, PersonID, HighSchool, DepositID, ApplicationID, SurveyID) VALUES (50, 19, 'nisl nunc rhoncus dui vel sem sed sagittis nam congue risus', 934792808, 376447941, 284418397);
-
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (1, 21, '6', 'Submitted', 1504299267, 1, 1, 1, 1);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (2, 41, '3', 'Accepted', 754975483, 2, 2, 2, 2);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (3, 3, '9', 'Accepted', 564601112, 3, 3, 3, 3);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (4, 27, '7', 'Accepted', 482975308, 4, 4, 4, 4);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (5, 24, '8', 'Accepted', 1195470701, 5, 5, 5, 5);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (6, 21, '8', 'Rejected', 1804943624, 6, 6, 6, 6);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (7, 12, '7', 'Rejected', 564601112, 7, 7, 7, 7);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (8, 5, '1', 'Rejected', 1951664230, 8, 8, 8, 8);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (9, 42, '6', 'Rejected', 1117198452, 9, 9, 9, 9);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (10, 35, '1', 'Accepted', 2042914671, 10, 10, 10, 10);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (11, 49, '8', 'Rejected', 482975308, 11, 11, 11, 11);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (12, 47, '7', 'Accepted', 436360375, 12, 12, 12, 12);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (13, 14, '1', 'Rejected', 1806907873, 13, 13, 13, 13);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (14, 39, '4', 'Submitted', 628290860, 14, 14, 14, 14);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (15, 21, '7', 'Rejected', 482975308, 15, 15, 15, 15);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (16, 9, '1', 'Submitted', 37284891, 16, 16, 16, 16);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (17, 50, '1', 'Rejected', 754975483, 17, 17, 17, 17);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (18, 34, '1', 'Accepted', 482975308, 18, 18, 18, 18);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (19, 49, '1', 'Accepted', 1056181021, 19, 19, 19, 19);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (20, 1, '9', 'Rejected', 300836671, 20, 20, 20, 20);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (21, 15, '1', 'Submitted', 996593668, 21, 21, 21, 21);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (22, 5, '7', 'Accepted', 996593668, 22, 22, 22, 22);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (23, 31, '2', 'Submitted', 17384849, 23, 23, 23, 23);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (24, 49, '1', 'Submitted', 781404917, 24, 24, 24, 24);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (25, 31, '7', 'Rejected', 2091129208, 25, 25, 25, 25);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (26, 28, '6', 'Submitted', 1804943624, 26, 26, 26, 26);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (27, 38, '5', 'Submitted', 17384849, 27, 27, 27, 27);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (28, 11, '6', 'Accepted', 996593668, 28, 28, 28, 28);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (29, 30, '1', 'Submitted', 2091129208, 29, 29, 29, 29);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (30, 18, '1', 'Submitted', 585825655, 30, 30, 30, 30);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (31, 21, '4', 'Submitted', 753309918, 31, 31, 31, 31);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (32, 40, '5', 'Accepted', 17384849, 32, 32, 32, 32);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (33, 43, '1', 'Rejected', 1862952405, 33, 33, 33, 33);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (34, 1, '1', 'Submitted', 7869449, 34, 34, 34, 34);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (35, 5, '5', 'Submitted', 1910236217, 35, 35, 35, 35);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (36, 13, '1', 'Accepted', 1951664230, 36, 36, 36, 36);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (37, 11, '7', 'Submitted', 1792569796, 37, 37, 37, 37);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (38, 46, '5', 'Accepted', 1806907873, 38, 38, 38, 38);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (39, 38, '8', 'Accepted', 686987445, 39, 39, 39, 39);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (40, 6, '1', 'Submitted', 729337753, 40, 40, 40, 40);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (41, 49, '1', 'Submitted', 37284891, 41, 41, 41, 41);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (42, 34, '6', 'Accepted', 1195470701, 42, 42, 42, 42);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (43, 23, '2', 'Submitted', 1117198452, 43, 43, 43, 43);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (44, 8, '5', 'Rejected', 996593668, 44, 44, 44, 44);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (45, 24, '9', 'Accepted', 1752821892, 45, 45, 45, 45);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (46, 17, '1', 'Rejected', 1996662616, 46, 46, 46, 46);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (47, 42, '6', 'Rejected', 754975483, 47, 47, 47, 47);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (48, 26, '1', 'Rejected', 628290860, 48, 48, 48, 48);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (49, 32, '8', 'Accepted', 1804943624, 49, 49, 49, 49);
-
-INSERT INTO UniGate.Application (ApplicationID, ApplicantID, SubmissionDate, Status, GuidanceCounsellorID, FinancialAidID, FinancialInformationID, ChecklistID, DecisionID) VALUES (50, 16, '6', 'Accepted', 1975728602, 50, 50, 50, 50);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (1, 13, 1);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (2, 3, 2);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (3, 33, 3);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (4, 28, 4);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (5, 27, 5);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (6, 23, 6);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (7, 24, 7);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (8, 26, 8);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (9, 4, 9);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (10, 6, 10);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (11, 7, 11);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (12, 20, 12);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (13, 14, 13);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (14, 21, 14);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (15, 48, 15);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (16, 44, 16);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (17, 47, 17);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (18, 36, 18);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (19, 11, 19);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (20, 38, 20);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (22, 50, 22);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (25, 46, 25);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (26, 22, 26);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (28, 8, 28);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (29, 16, 29);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (30, 30, 30);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (33, 39, 33);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (34, 40, 34);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (37, 17, 37);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (39, 31, 39);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (40, 5, 40);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (41, 9, 41);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (43, 1, 43);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (44, 34, 44);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (45, 42, 45);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (46, 15, 46);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (47, 12, 47);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (48, 19, 48);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (49, 37, 49);
-
-INSERT INTO UniGate.AdmissionsOfficer (AdmissionsOfficerID, PersonID, UniversityID)
-VALUES (50, 35, 50);
-
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (39, 2);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (25, 3);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (22, 4);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (28, 4);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (50, 4);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (27, 5);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (5, 6);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (25, 6);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (49, 6);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (42, 7);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (35, 11);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (7, 12);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (7, 13);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (23, 13);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (49, 14);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (24, 15);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (48, 16);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (21, 17);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (30, 18);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (23, 20);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (9, 21);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (15, 23);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (42, 23);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (13, 24);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (18, 24);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (7, 28);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (4, 29);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (7, 30);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (32, 30);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (44, 30);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (12, 31);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (3, 32);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (7, 33);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (40, 35);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (18, 36);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (19, 36);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (4, 37);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (36, 38);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (11, 39);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (22, 39);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (10, 40);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (26, 43);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (49, 44);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (22, 45);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (5, 46);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (14, 46);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (50, 46);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (23, 48);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (10, 49);
-
-INSERT INTO UniGate.AttendsEvents (ApplicantID, EventID)
-VALUES (43, 49);
-
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (1, 27, 'in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (2, 37, 'congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (3, 7, 'et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (4, 39, 'potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (5, 47, 'vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (6, 20, 'diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (7, 9, 'odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (8, 1, 'quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (9, 5, 'ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (10, 44, 'nullam sit amet turpis elementum ligula vehicula consequat morbi a', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (11, 13, 'vel lectus in quam fringilla rhoncus mauris enim leo rhoncus', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (12, 5, 'eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (13, 33, 'velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (14, 28, 'nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (15, 28, 'nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (16, 29, 'lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (17, 11, 'nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (18, 38, 'lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (19, 5, 'nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (20, 16, 'cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (21, 40, 'eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (22, 18, 'quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (23, 34, 'justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (24, 14, 'tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (25, 14, 'ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (26, 23, 'odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (27, 25, 'felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (28, 47, 'vestibulum proin eu mi nulla ac enim in tempor turpis', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (29, 24, 'ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (30, 50, 'mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (31, 35, 'habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (32, 5, 'sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (33, 43, 'consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (34, 15, 'id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (35, 9, 'posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (36, 44, 'dui nec nisi volutpat eleifend donec ut dolor morbi vel', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (37, 31, 'varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (38, 3, 'purus sit amet nulla quisque arcu libero rutrum ac lobortis vel', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (39, 40, 'ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (40, 16, 'lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (41, 12, 'mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (42, 17, 'in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (43, 8, 'aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (44, 37, 'vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (45, 20, 'quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (46, 36, 'laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (47, 2, 'natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (48, 6, 'odio in hac habitasse platea dictumst maecenas ut massa quis augue', 'Incomplete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (49, 27, 'convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris', 'Complete');
-
-INSERT INTO UniGate.Checklist (ChecklistID, ApplicationID, Description, Status) VALUES (50, 23, 'curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam', 'Incomplete');
-
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (1, 34, '440-457-8608', 'vhrinchishin0@people.com.cn');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (2, 10, '865-700-7487', 'csearjeant1@answers.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (3, 50, '890-833-8181', 'nsharrier2@prnewswire.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (4, 39, '274-410-4768', 'icallicott3@etsy.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (5, 21, '105-497-9222', 'wgundry4@cargocollective.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (6, 43, '790-360-7263', 'abosley5@senate.gov');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (7, 34, '244-504-4768', 'jmorbey6@sina.com.cn');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (8, 3, '469-227-4468', 'pvakhrushin7@businesswire.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (9, 14, '640-141-1619', 'fscutter8@diigo.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (10, 26, '636-286-2687', 'epowles9@hhs.gov');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (11, 35, '375-784-8781', 'kloddena@pinterest.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (12, 26, '910-619-8698', 'ahastedb@wikia.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (13, 19, '829-298-0952', 'shillanc@sun.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (14, 28, '248-681-4112', 'ciannellod@illinois.edu');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (15, 20, '628-437-4700', 'sfarlowe@miibeian.gov.cn');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (16, 31, '373-144-1377', 'kduvalf@admin.ch');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (17, 36, '932-911-5920', 'couldg@wikimedia.org');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (18, 21, '665-121-5382', 'amorenah@spotify.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (19, 42, '911-666-9111', 'gpulsfordi@bloomberg.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (20, 11, '254-162-6237', 'pkingdonj@omniture.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (21, 10, '340-624-3398', 'skeenek@cbslocal.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (22, 37, '350-529-2236', 'ccamelial@hubpages.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (23, 48, '491-782-8007', 'gbrummellm@symantec.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (24, 3, '716-104-6380', 'cwellann@taobao.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (25, 32, '956-593-9632', 'rharrhyo@yahoo.co.jp');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (26, 27, '378-845-8173', 'wmassowp@pcworld.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (27, 29, '806-778-0240', 'bfurmageq@youtu.be');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (28, 34, '856-554-8912', 'ljostr@pagesperso-orange.fr');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (29, 3, '228-446-0278', 'wmatelyunass@ucsd.edu');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (30, 19, '588-988-3615', 'sollerenshawt@acquirethisname.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (31, 31, '166-701-1959', 'ecasau@yellowpages.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (32, 35, '411-247-0904', 'rsummerliev@huffingtonpost.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (33, 19, '478-188-7350', 'chundalw@dailymail.co.uk');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (34, 33, '949-915-1537', 'ggriptonx@usa.gov');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (35, 16, '308-955-9069', 'vbeety@histats.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (36, 29, '246-179-2756', 'tfarnanz@google.co.jp');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (37, 25, '934-986-0351', 'mebi10@archive.org');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (38, 3, '476-769-9205', 'rduquesnay11@reference.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (39, 6, '991-239-8480', 'kprickett12@upenn.edu');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (40, 15, '296-355-1098', 'kcorhard13@symantec.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (41, 38, '934-802-3283', 'fyeldon14@elegantthemes.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (42, 2, '637-734-7033', 'mcristobal15@php.net');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (43, 4, '260-166-2140', 'cguitton16@accuweather.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (44, 37, '720-934-3128', 'bfradson17@economist.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (45, 11, '119-375-7808', 'mmchaffy18@newsvine.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (46, 49, '692-675-6096', 'gzorzoni19@g.co');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (47, 22, '341-733-7458', 'hyurkevich1a@europa.eu');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (48, 31, '509-266-0670', 'ldonald1b@squidoo.com');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (49, 5, '738-214-5916', 'vbraham1c@archive.org');
-
-INSERT INTO UniGate.Contact (ContactID, PersonID, PhoneNumber, EmailAddress)
-VALUES (50, 14, '324-269-8122', 'scharrier1d@ovh.net');
-
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (1, 1, 'Rejected', '2', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (2, 2, 'Waitlisted', '4', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (3, 3, 'Rejected', '7', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (4, 4, 'Rejected', '8', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (5, 5, 'Accepted', '1', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (6, 6, 'Accepted', '8', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 1);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (7, 7, 'Accepted', '3', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 1);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (8, 8, 'Accepted', '1', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (9, 9, 'Rejected', '1', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (10, 10, 'Rejected', '7', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (11, 11, 'Waitlisted', '3', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (12, 12, 'Rejected', '8', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (13, 13, 'Waitlisted', '1', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 1);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (14, 14, 'Waitlisted', '1', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (15, 15, 'Rejected', '5', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (16, 16, 'Accepted', '7', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (17, 17, 'Waitlisted', '9', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (18, 18, 'Waitlisted', '6', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (19, 19, 'Accepted', '5', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 1);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (20, 20, 'Rejected', '6', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (21, 21, 'Waitlisted', '9', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (22, 22, 'Waitlisted', '8', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 1);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (23, 23, 'Accepted', '1', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (24, 24, 'Accepted', '9', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 1);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (25, 25, 'Waitlisted', '3', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (26, 26, 'Accepted', '2', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 1);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (27, 27, 'Waitlisted', '2', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (28, 28, 'Rejected', '7', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (29, 29, 'Accepted', '5', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 1);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (30, 30, 'Rejected', '2', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (31, 31, 'Rejected', '1', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (32, 32, 'Accepted', '3', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (33, 33, 'Waitlisted', '4', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 1);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (34, 34, 'Waitlisted', '1', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (35, 35, 'Rejected', '1', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (36, 36, 'Waitlisted', '2', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (37, 37, 'Rejected', '4', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (38, 38, 'Rejected', '1', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (39, 39, 'Rejected', '9', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (40, 40, 'Waitlisted', '8', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (41, 41, 'Accepted', '9', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (42, 42, 'Accepted', '1', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (43, 43, 'Rejected', '7', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (44, 44, 'Accepted', '1', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 1);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (45, 45, 'Accepted', '7', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 1);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (46, 46, 'Accepted', '1', 'Dear Applicant,
-
-Congratulations! We are pleased to inform you that you have been accepted into our college. Your application stood out to us in many ways, and we are excited about what you will bring to our campus community. We saw great potential in your achievements and your character, and we believe you will thrive here. Welcome aboard!', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (47, 47, 'Waitlisted', '7', 'Dear Applicant,
-
-Thank you for your patience during our admission process. We have decided to place your application on our waitlist. This decision reflects the competitive nature of this year’s applicant pool and not a lack of qualification on your part. We encourage you to remain hopeful and to update us with any new achievements or information that may strengthen your application.', 1);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (48, 48, 'Rejected', '1', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (49, 49, 'Rejected', '7', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-INSERT INTO UniGate.Decision (DecisionID, ApplicationID, Result, DecisionDate, DecisionLetter, ContinuedInterest) VALUES (50, 50, 'Rejected', '9', 'Dear Applicant,
-
-After thorough consideration of your application, we regret to inform you that we are unable to offer you admission at this time. Please understand that this decision is not a reflection of your abilities or potential but rather the result of an exceptionally competitive applicant pool this year. We are grateful for your interest in our college and wish you the best in your future academic pursuits.', 0);
-
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (15, 50, 60000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (58, 50, 50000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (64, 50, 30000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (264, 50, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (307, 50, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (354, 50, 80000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (397, 50, 80000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (406, 50, 40000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (457, 50, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (471, 50, 100000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (525, 50, 50000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (550, 50, 70000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (582, 50, 60000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (637, 50, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (681, 50, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (690, 50, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (750, 50, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (783, 50, 50000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (807, 50, 50000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (861, 50, 70000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (914, 50, 20000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (953, 50, 20000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (972, 50, 10000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (23, 49, 40000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (57, 49, 60000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (66, 49, 70000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (122, 49, 50000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (177, 49, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (208, 49, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (221, 49, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (345, 49, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (433, 49, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (437, 49, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (493, 49, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (500, 49, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (535, 49, 20000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (573, 49, 60000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (616, 49, 10000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (660, 49, 100000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (739, 49, 80000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (788, 49, 40000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (868, 49, 10000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (888, 49, 30000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (906, 49, 60000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (950, 49, 20000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (991, 49, 20000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (25, 48, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (47, 48, 80000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (91, 48, 90000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (111, 48, 10000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (168, 48, 100000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (195, 48, 100000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (269, 48, 90000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (342, 48, 80000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (378, 48, 80000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (432, 48, 80000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (462, 48, 50000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (467, 48, 10000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (527, 48, 10000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (554, 48, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (585, 48, 10000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (601, 48, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (626, 48, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (665, 48, 100000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (711, 48, 30000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (721, 48, 90000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (746, 48, 20000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (787, 48, 70000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (838, 48, 60000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (877, 48, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (901, 48, 20000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (968, 48, 40000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (19, 47, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (44, 47, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (110, 47, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (142, 47, 70000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (194, 47, 50000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (368, 47, 20000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (383, 47, 40000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (430, 47, 10000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (512, 47, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (558, 47, 50000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (569, 47, 40000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (591, 47, 40000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (635, 47, 30000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (671, 47, 10000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (697, 47, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (717, 47, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (833, 47, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (862, 47, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (889, 47, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (992, 47, 40000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (16, 46, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (133, 46, 100000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (192, 46, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (220, 46, 60000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (270, 46, 30000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (348, 46, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (377, 46, 30000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (435, 46, 50000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (513, 46, 50000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (577, 46, 10000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (628, 46, 40000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (667, 46, 10000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (704, 46, 80000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (734, 46, 20000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (765, 46, 60000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (897, 46, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (943, 46, 30000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (989, 46, 10000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (86, 45, 50000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (186, 45, 30000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (189, 45, 10000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (280, 45, 20000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (337, 45, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (411, 45, 80000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (439, 45, 30000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (509, 45, 50000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (561, 45, 40000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (611, 45, 60000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (642, 45, 60000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (661, 45, 90000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (755, 45, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (844, 45, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (882, 45, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (922, 45, 100000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (938, 45, 40000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (978, 45, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (3, 44, 60000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (53, 44, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (127, 44, 50000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (178, 44, 100000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (236, 44, 70000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (263, 44, 10000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (304, 44, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (375, 44, 90000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (438, 44, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (474, 44, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (515, 44, 90000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (540, 44, 60000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (563, 44, 90000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (674, 44, 90000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (810, 44, 90000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (839, 44, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (942, 44, 70000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (981, 44, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (24, 43, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (38, 43, 30000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (90, 43, 30000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (171, 43, 40000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (223, 43, 20000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (259, 43, 100000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (319, 43, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (367, 43, 10000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (405, 43, 20000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (447, 43, 80000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (497, 43, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (695, 43, 60000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (723, 43, 60000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (796, 43, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (824, 43, 50000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (853, 43, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (873, 43, 70000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (936, 43, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (48, 42, 70000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (71, 42, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (146, 42, 80000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (161, 42, 10000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (216, 42, 40000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (271, 42, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (282, 42, 20000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (330, 42, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (404, 42, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (443, 42, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (516, 42, 70000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (570, 42, 40000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (640, 42, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (652, 42, 90000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (692, 42, 30000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (737, 42, 70000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (760, 42, 50000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (800, 42, 30000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (881, 42, 40000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (975, 42, 10000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (13, 41, 40000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (94, 41, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (150, 41, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (262, 41, 90000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (306, 41, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (442, 41, 60000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (470, 41, 50000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (639, 41, 50000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (728, 41, 100000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (813, 41, 80000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (872, 41, 60000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (961, 41, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (14, 40, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (74, 40, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (145, 40, 10000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (190, 40, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (245, 40, 70000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (275, 40, 80000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (315, 40, 50000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (361, 40, 60000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (398, 40, 70000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (431, 40, 100000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (446, 40, 70000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (505, 40, 30000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (532, 40, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (566, 40, 100000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (612, 40, 90000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (622, 40, 100000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (694, 40, 20000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (804, 40, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (832, 40, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (893, 40, 20000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (925, 40, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (982, 40, 80000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (1, 39, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (32, 39, 100000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (83, 39, 70000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (155, 39, 10000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (174, 39, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (215, 39, 80000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (231, 39, 50000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (277, 39, 10000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (309, 39, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (350, 39, 70000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (376, 39, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (423, 39, 60000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (441, 39, 70000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (466, 39, 90000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (526, 39, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (556, 39, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (581, 39, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (631, 39, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (679, 39, 70000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (691, 39, 40000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (766, 39, 70000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (791, 39, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (859, 39, 10000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (990, 39, 60000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (49, 38, 20000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (70, 38, 30000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (143, 38, 10000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (185, 38, 60000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (212, 38, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (234, 38, 100000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (276, 38, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (286, 38, 30000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (341, 38, 100000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (353, 38, 40000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (409, 38, 20000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (458, 38, 20000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (508, 38, 80000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (583, 38, 90000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (693, 38, 80000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (718, 38, 80000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (751, 38, 60000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (803, 38, 100000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (811, 38, 30000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (944, 38, 90000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (994, 38, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (9, 37, 10000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (93, 37, 50000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (121, 37, 50000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (128, 37, 50000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (176, 37, 50000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (268, 37, 90000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (290, 37, 20000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (321, 37, 20000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (393, 37, 80000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (408, 37, 10000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (465, 37, 100000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (485, 37, 60000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (618, 37, 10000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (650, 37, 60000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (654, 37, 30000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (736, 37, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (761, 37, 10000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (790, 37, 90000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (815, 37, 60000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (930, 37, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (932, 37, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (969, 37, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (141, 36, 80000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (156, 36, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (193, 36, 20000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (238, 36, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (292, 36, 50000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (322, 36, 50000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (364, 36, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (379, 36, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (548, 36, 20000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (603, 36, 50000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (699, 36, 60000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (741, 36, 90000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (767, 36, 70000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (802, 36, 70000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (886, 36, 80000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (910, 36, 80000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (980, 36, 30000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (10, 35, 80000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (40, 35, 80000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (69, 35, 80000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (100, 35, 20000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (180, 35, 90000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (219, 35, 20000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (308, 35, 100000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (311, 35, 70000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (434, 35, 40000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (531, 35, 90000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (596, 35, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (677, 35, 40000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (705, 35, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (731, 35, 70000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (780, 35, 10000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (817, 35, 10000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (892, 35, 80000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (916, 35, 100000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (967, 35, 10000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (17, 34, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (65, 34, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (152, 34, 20000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (173, 34, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (230, 34, 20000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (267, 34, 10000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (362, 34, 100000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (388, 34, 60000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (417, 34, 100000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (488, 34, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (506, 34, 30000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (546, 34, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (647, 34, 70000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (710, 34, 40000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (719, 34, 60000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (745, 34, 10000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (781, 34, 50000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (821, 34, 100000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (850, 34, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (891, 34, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (923, 34, 10000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (109, 33, 40000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (265, 33, 10000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (347, 33, 30000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (559, 33, 30000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (608, 33, 50000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (764, 33, 20000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (795, 33, 40000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (829, 33, 40000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (851, 33, 80000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (894, 33, 40000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (900, 33, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (960, 33, 90000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (30, 32, 30000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (80, 32, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (154, 32, 60000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (187, 32, 50000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (228, 32, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (334, 32, 30000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (455, 32, 50000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (543, 32, 50000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (574, 32, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (599, 32, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (653, 32, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (712, 32, 20000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (714, 32, 80000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (763, 32, 80000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (805, 32, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (883, 32, 10000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (966, 32, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (63, 31, 60000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (116, 31, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (147, 31, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (256, 31, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (317, 31, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (521, 31, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (602, 31, 60000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (641, 31, 70000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (666, 31, 30000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (756, 31, 90000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (786, 31, 60000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (855, 31, 50000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (898, 31, 20000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (908, 31, 20000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (985, 31, 80000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (8, 30, 20000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (117, 30, 20000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (134, 30, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (254, 30, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (326, 30, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (370, 30, 40000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (385, 30, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (450, 30, 30000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (478, 30, 50000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (502, 30, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (533, 30, 50000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (567, 30, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (610, 30, 60000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (713, 30, 10000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (743, 30, 70000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (775, 30, 90000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (837, 30, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (858, 30, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (878, 30, 10000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (934, 30, 50000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (46, 29, 80000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (72, 29, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (139, 29, 40000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (224, 29, 80000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (338, 29, 20000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (359, 29, 80000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (387, 29, 100000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (412, 29, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (453, 29, 100000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (475, 29, 50000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (519, 29, 90000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (597, 29, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (698, 29, 60000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (738, 29, 20000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (806, 29, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (816, 29, 20000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (957, 29, 50000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (52, 28, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (118, 28, 50000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (125, 28, 50000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (172, 28, 10000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (232, 28, 60000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (252, 28, 30000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (281, 28, 100000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (328, 28, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (374, 28, 80000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (499, 28, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (557, 28, 90000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (564, 28, 90000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (645, 28, 100000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (655, 28, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (709, 28, 10000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (774, 28, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (869, 28, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (927, 28, 10000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (946, 28, 20000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (22, 27, 50000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (87, 27, 70000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (103, 27, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (129, 27, 30000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (198, 27, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (248, 27, 100000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (273, 27, 50000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (298, 27, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (349, 27, 40000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (401, 27, 100000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (452, 27, 10000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (489, 27, 90000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (568, 27, 70000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (595, 27, 70000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (682, 27, 10000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (700, 27, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (727, 27, 80000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (753, 27, 70000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (797, 27, 50000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (822, 27, 20000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (856, 27, 60000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (870, 27, 60000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (956, 27, 30000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (995, 27, 10000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (21, 26, 60000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (54, 26, 100000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (99, 26, 30000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (149, 26, 20000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (181, 26, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (244, 26, 50000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (331, 26, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (394, 26, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (448, 26, 60000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (468, 26, 50000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (565, 26, 60000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (598, 26, 30000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (644, 26, 30000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (672, 26, 90000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (733, 26, 40000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (759, 26, 60000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (782, 26, 50000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (826, 26, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (857, 26, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (902, 26, 80000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (977, 26, 90000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (60, 25, 40000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (113, 25, 60000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (148, 25, 100000.00, '3');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (179, 25, 100000.00, '7');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (211, 25, 30000.00, '6');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (239, 25, 10000.00, '5');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (272, 25, 100000.00, '9');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (380, 25, 30000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (444, 25, 80000.00, '1');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (498, 25, 100000.00, '8');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (560, 25, 80000.00, '4');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (613, 25, 60000.00, '2');
-
-INSERT INTO UniGate.Deposit (DepositID, ApplicantID, Amount, DatePaid) VALUES (646, 25, 30000.00, '4');
-
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (1, 'Application essay writing workshop', '6');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (2, 'College fair at local community center', '6');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (3, 'Open house event for high school seniors', '6');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (4, 'Financial aid information session', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (5, 'Panel discussion with current college students', '6');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (6, 'Open house event for high school seniors', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (7, 'Open house event for high school seniors', '5');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (8, 'College fair at local community center', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (9, 'Open house event for high school seniors', '2');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (10, 'Admissions workshop for parents and students', '7');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (11, 'Meet and greet with college faculty', '3');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (12, 'Panel discussion with current college students', '9');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (13, 'Admissions workshop for parents and students', '7');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (14, 'Meet and greet with college faculty', '8');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (15, 'Alumni networking event for recent graduates', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (16, 'College fair at local community center', '4');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (17, 'Campus tour for incoming freshmen', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (18, 'Panel discussion with current college students', '6');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (19, 'Alumni networking event for recent graduates', '8');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (20, 'College fair at local community center', '3');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (21, 'Virtual information session for prospective students', '2');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (22, 'Financial aid information session', '7');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (23, 'Campus tour for incoming freshmen', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (24, 'Campus tour for incoming freshmen', '5');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (25, 'Panel discussion with current college students', '8');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (26, 'Alumni networking event for recent graduates', '3');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (27, 'Application essay writing workshop', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (28, 'Meet and greet with college faculty', '7');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (29, 'Alumni networking event for recent graduates', '8');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (30, 'Panel discussion with current college students', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (31, 'Application essay writing workshop', '2');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (32, 'Panel discussion with current college students', '2');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (33, 'Virtual information session for prospective students', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (34, 'College fair at local community center', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (35, 'Campus tour for incoming freshmen', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (36, 'Meet and greet with college faculty', '9');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (37, 'Alumni networking event for recent graduates', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (38, 'Panel discussion with current college students', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (39, 'College fair at local community center', '4');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (40, 'Financial aid information session', '2');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (41, 'College fair at local community center', '1');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (42, 'Alumni networking event for recent graduates', '5');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (43, 'Campus tour for incoming freshmen', '3');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (44, 'Virtual information session for prospective students', '5');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (45, 'Alumni networking event for recent graduates', '8');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (46, 'Application essay writing workshop', '5');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (47, 'Virtual information session for prospective students', '6');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (48, 'Panel discussion with current college students', '4');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (49, 'Admissions workshop for parents and students', '6');
-
-INSERT INTO UniGate.Event (EventID, Description, EventDate)
-VALUES (50, 'College fair at local community center', '8');
-
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (1, 2, 'Essay or personal statement', 94143.54);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (2, 24, 'Proof of income below a certain threshold', 240410.68);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (3, 6, 'Enrollment in specific program or major', 91062.77);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (4, 6, 'Community service involvement', 524701.51);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (5, 33, 'Demonstrated financial need', 205689.57);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (6, 39, 'First-generation college student', 175916.39);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (7, 28, 'Participation in extracurricular activities', 30628.14);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (8, 27, 'First-generation college student', 837255.23);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (9, 38, 'Submission of FAFSA form', 852242.14);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (10, 14, 'Essay or personal statement', 99879.43);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (11, 15, 'Minority status', 430722.42);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (12, 48, 'Demonstrated financial need', 743937.82);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (13, 30, 'Proof of income below a certain threshold', 129389.51);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (14, 44, 'Submission of FAFSA form', 184453.41);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (15, 39, 'Submission of FAFSA form', 575733.29);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (16, 6, 'Academic merit', 705192.82);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (17, 49, 'Participation in extracurricular activities', 792531.77);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (18, 25, 'First-generation college student', 136909.26);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (19, 19, 'First-generation college student', 736758.51);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (20, 6, 'First-generation college student', 350482.35);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (21, 12, 'Enrollment in specific program or major', 707459.18);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (22, 47, 'Proof of income below a certain threshold', 362263.71);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (23, 50, 'Participation in extracurricular activities', 939109.71);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (24, 14, 'Minority status', 404788.22);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (25, 30, 'Essay or personal statement', 120086.28);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (26, 11, 'Academic merit', 863466.22);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (27, 12, 'Academic merit', 440275.91);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (28, 12, 'Demonstrated financial need', 303112.48);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (29, 39, 'Participation in extracurricular activities', 776664.66);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (30, 8, 'Enrollment in specific program or major', 538858.91);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (31, 38, 'Demonstrated financial need', 246642.85);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (32, 38, 'Proof of income below a certain threshold', 326357.96);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (33, 30, 'Submission of FAFSA form', 256062.27);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (34, 50, 'Essay or personal statement', 989943.98);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (35, 42, 'Demonstrated financial need', 44368.54);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (36, 49, 'Proof of income below a certain threshold', 192963.48);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (37, 44, 'Academic merit', 892376.99);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (38, 16, 'Essay or personal statement', 938428.31);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (39, 13, 'Demonstrated financial need', 722883.72);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (40, 15, 'Academic merit', 491066.07);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (41, 35, 'Proof of income below a certain threshold', 774474.60);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (42, 23, 'First-generation college student', 448779.20);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (43, 46, 'Participation in extracurricular activities', 687255.08);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (44, 48, 'Academic merit', 694440.27);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (45, 9, 'Minority status', 751212.08);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (46, 11, 'Academic merit', 498498.34);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (47, 37, 'Participation in extracurricular activities', 710299.40);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (48, 40, 'Minority status', 232260.96);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (49, 36, 'Participation in extracurricular activities', 504971.82);
-
-INSERT INTO UniGate.FinancialAid (FinancialAidID, ApplicantID, Conditions, Amount)
-VALUES (50, 2, 'First-generation college student', 273054.60);
-
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (1, 1, 60000.00, 3000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (2, 41, 50000.00, 3800.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (3, 8, 60000.00, 8200.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (4, 6, 60000.00, 6400.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (5, 36, 58000.00, 9100.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (6, 27, 50000.00, 6400.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (7, 21, 60000.00, 3000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (8, 30, 32000.00, 5600.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (9, 36, 53000.00, 6400.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (10, 46, 53000.00, 8200.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (11, 20, 75000.00, 3800.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (12, 27, 75000.00, 5600.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (13, 32, 53000.00, 8200.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (14, 28, 48000.00, 4200.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (15, 47, 42000.00, 4800.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (16, 13, 60000.00, 9100.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (17, 38, 60000.00, 4200.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (18, 31, 75000.00, 7500.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (19, 26, 42000.00, 6400.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (20, 36, 50000.00, 6400.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (21, 39, 50000.00, 3000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (22, 25, 32000.00, 5000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (23, 18, 90000.00, 5600.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (24, 50, 90000.00, 4200.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (25, 13, 48000.00, 3000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (26, 47, 48000.00, 6400.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (27, 5, 90000.00, 5000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (28, 20, 67000.00, 6400.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (29, 21, 53000.00, 5600.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (30, 43, 67000.00, 8200.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (31, 37, 60000.00, 4800.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (32, 14, 60000.00, 5000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (33, 29, 90000.00, 5000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (34, 7, 42000.00, 5000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (35, 1, 48000.00, 3000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (36, 40, 58000.00, 3000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (37, 13, 90000.00, 9100.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (38, 48, 58000.00, 9100.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (39, 35, 32000.00, 5000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (40, 21, 67000.00, 3000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (41, 32, 75000.00, 3000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (42, 30, 90000.00, 6400.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (43, 4, 32000.00, 5600.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (44, 38, 60000.00, 6400.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (45, 5, 67000.00, 4200.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (46, 9, 67000.00, 5000.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (47, 24, 53000.00, 5600.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (48, 11, 67000.00, 5600.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (49, 6, 60000.00, 5600.00);
-
-INSERT INTO UniGate.FinancialInformation (FinancialInformationID, ApplicationID, EstimatedCost, Taxes)
-VALUES (50, 19, 90000.00, 5000.00);
-
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (7869449, 30, '#8b2');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (17384849, 39, '#747');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (30358770, 27, '#7d7');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (37284891, 14, '#fb4');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (106009575, 50, '#e5e');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (141463877, 18, '#319');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (278613721, 18, '#313');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (300836671, 32, '#937');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (371421244, 16, '#dd7');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (436360375, 29, '#0d6');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (482975308, 17, '#417');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (564601112, 10, '#dd1');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (565878348, 34, '#8cf');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (575126074, 32, '#310');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (585825655, 8, '#0ab');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (596340223, 47, '#a63');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (628290860, 3, '#454');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (641705766, 14, '#371');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (686987445, 47, '#947');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (729337753, 41, '#8e5');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (753309918, 34, '#260');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (754975483, 40, '#630');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (781404917, 44, '#002');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (870737936, 45, '#5cc');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (996593668, 35, '#0af');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1053487951, 34, '#b19');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1056181021, 22, '#347');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1117198452, 13, '#286');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1188280096, 6, '#e2a');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1195470701, 9, '#50d');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1219581487, 13, '#57b');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1309518939, 42, '#cb4');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1504299267, 33, '#363');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1568006923, 28, '#e79');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1668146506, 13, '#f4a');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1676366997, 16, '#557');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1715404729, 20, '#19b');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1752821892, 48, '#32d');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1792569796, 44, '#f18');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1804943624, 10, '#ec9');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1806907873, 36, '#6b2');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1862952405, 22, '#a70');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1910236217, 23, '#b52');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1951664230, 26, '#95d');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1975728602, 47, '#846');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1982170055, 11, '#b07');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (1996662616, 20, '#9e8');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (2042914671, 13, '#975');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (2048022662, 36, '#138');
-
-INSERT INTO UniGate.GuidanceCounsellor (GuidanceCounsellorID, PersonID, HighSchool)
-VALUES (2091129208, 49, '#f4c');
-
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (34, 3);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (40, 4);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (37, 5);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (9, 7);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (4, 8);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (44, 8);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (8, 9);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (28, 9);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (36, 9);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (15, 10);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (9, 11);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (16, 11);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (46, 13);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (4, 14);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (24, 14);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (8, 15);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (25, 15);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (29, 15);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (21, 16);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (19, 18);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (39, 19);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (15, 20);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (22, 20);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (45, 20);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (8, 21);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (9, 22);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (17, 22);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (47, 22);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (18, 23);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (48, 23);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (7, 24);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (3, 25);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (43, 25);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (9, 27);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (39, 30);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (11, 31);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (41, 31);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (32, 32);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (16, 36);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (31, 37);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (1, 39);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (13, 39);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (27, 42);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (29, 44);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (43, 44);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (3, 46);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (27, 46);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (26, 48);
-
-INSERT INTO UniGate.isApplicant (ApplicantID, PersonID)
-VALUES (50, 49);
-
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (585825655, 1);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (371421244, 3);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1715404729, 4);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1668146506, 5);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (781404917, 6);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1504299267, 6);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1309518939, 9);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (565878348, 10);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1568006923, 10);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (585825655, 12);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (585825655, 13);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1309518939, 14);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (870737936, 15);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1982170055, 15);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1996662616, 15);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1982170055, 17);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1668146506, 18);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (585825655, 19);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (30358770, 20);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1910236217, 20);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (2048022662, 21);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (2091129208, 22);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (596340223, 24);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1752821892, 24);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1910236217, 25);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1982170055, 25);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1188280096, 28);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1982170055, 29);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (753309918, 30);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (30358770, 31);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (996593668, 31);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (371421244, 32);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (141463877, 34);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (565878348, 34);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1053487951, 35);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (482975308, 36);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1195470701, 37);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (641705766, 38);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1676366997, 40);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (2042914671, 40);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (686987445, 41);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (753309918, 41);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1053487951, 42);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1188280096, 42);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (596340223, 43);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (1117198452, 44);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (754975483, 46);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (278613721, 48);
-
-INSERT INTO UniGate.isGuidanceCounsellor (GuidanceCounsellorID, PersonID)
-VALUES (436360375, 49);
-
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (1, 'Jodee', '9', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (2, 'Yettie', '3', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (3, 'Leisha', '1', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (4, 'Susann', '1', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (5, 'Tabbitha', '6', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (6, 'Guinna', '8', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (7, 'Morie', '2', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (8, 'Donalt', '1', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (9, 'Zeb', '8', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (10, 'Adler', '7', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (11, 'Dorella', '7', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (12, 'Roze', '4', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (13, 'Maighdiln', '2', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (14, 'Marybeth', '3', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (15, 'Sarena', '7', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (16, 'Lavena', '3', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (17, 'Gabi', '7', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (18, 'Aryn', '6', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (19, 'Ced', '1', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (20, 'Hall', '7', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (21, 'Hortense', '1', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (22, 'Curt', '6', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (23, 'Morie', '1', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (24, 'Dinnie', '2', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (25, 'Noel', '7', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (26, 'Konstance', '2', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (27, 'Grata', '1', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (28, 'Evangelia', '8', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (29, 'Basile', '1', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (30, 'Cherie', '1', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (31, 'Aura', '8', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (32, 'Flint', '4', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (33, 'Bordy', '1', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (34, 'Mata', '1', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (35, 'Nanete', '8', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (36, 'Burnaby', '1', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (37, 'Zabrina', '1', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (38, 'Calhoun', '1', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (39, 'Elsi', '4', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (40, 'Beulah', '1', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (41, 'Anett', '2', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (42, 'Frederik', '4', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (43, 'Breena', '3', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (44, 'Tammara', '7', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (45, 'Eamon', '7', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (46, 'Basilius', '3', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (47, 'Sofia', '1', 'Guidance Counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (48, 'Petronia', '4', 'Applicant');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (49, 'Fianna', '1', 'Admissions counsellor');
-
-INSERT INTO UniGate.Person (PersonID, Name, DOB, Type)
-VALUES (50, 'Alvy', '7', 'Guidance Counsellor');
-
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (1, 38, 'Creative Arts Scholarship', 30000.00, 'Participation in a leadership program');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (2, 32, 'libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis', 14601160.00, '189180720');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (3, 19, 'ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo', 21697170.00, '79319187');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (4, 15, 'Environmental Sustainability Scholarship', 50000.00, 'Minimum of 50 hours of volunteer work');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (5, 15, 'varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mat', 3619028.00, '746567609');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (6, 41, 'lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet', 83230996.00, '967097717');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (7, 3, 'euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis', 5828302.00, '989699173');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (8, 48, 'lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur', 22023798.00, '314385755');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (9, 18, 'Community Service Scholarship', 45000.00, 'Enrolled in a STEM program');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (10, 38, 'Creative Arts Scholarship', 30000.00, 'Enrolled in a STEM program');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (11, 9, 'feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imper', 7018395.00, '686000397');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (12, 26, 'Diversity and Inclusion Scholarship', 70000.00, 'Recommendation letter from a teacher');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (13, 28, 'dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nun', 58979989.00, '604590');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (14, 5, 'ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vita', 85762063.00, '107203681');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (15, 49, 'ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam', 85153634.00, '124831382');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (16, 7, 'in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam', 14508511.00, '636475431');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (17, 16, 'ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque', 43175377.00, '456433080');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (18, 37, 'Community Service Scholarship', 45000.00, 'Participation in community service activities');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (19, 27, 'luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet', 63122975.00, '53785400');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (20, 6, 'nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accum', 56909021.00, '207825152');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (21, 16, 'Creative Arts Scholarship', 80000.00, 'Enrolled in a STEM program');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (22, 33, 'donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam', 91140359.00, '376360498');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (23, 12, 'mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu ni', 84362137.00, '320397112');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (24, 9, 'Community Service Scholarship', 25000.00, 'Minimum of 50 hours of volunteer work');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (25, 20, 'erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper', 35323563.00, '48893424');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (26, 24, 'suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis ', 99213664.00, '78285128');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (27, 35, 'Diversity and Inclusion Scholarship', 30000.00, 'Minimum of 50 hours of volunteer work');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (28, 43, 'Entrepreneurship Scholarship', 30000.00, 'Interest in pursuing a career in healthcare');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (29, 13, 'Entrepreneurship Scholarship', 45000.00, 'Enrolled in a STEM program');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (30, 45, 'morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit', 42477526.00, '625056441');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (31, 41, 'Diversity and Inclusion Scholarship', 35000.00, 'Participation in a leadership program');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (32, 27, 'Environmental Sustainability Scholarship', 35000.00, 'Member of a minority group');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (33, 42, 'Future Leaders Scholarship', 60000.00, 'Recommendation letter from a teacher');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (34, 39, 'congue eget semper rutrum nulla nunc purus phasellus in felis donec semper', 87676785.00, '146308549');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (35, 8, 'augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elem', 14388191.00, '465685967');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (36, 35, 'Entrepreneurship Scholarship', 10000.00, 'Essay submission');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (37, 7, 'Health and Wellness Scholarship', 60000.00, 'Recommendation letter from a teacher');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (38, 35, 'vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucib', 61581111.00, '724559301');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (39, 4, 'ante ipsum primis in faucibus orci luctus et ultrices posuere', 70410876.00, '598580082');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (40, 26, 'justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan to', 10712542.00, '984148841');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (41, 11, 'donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultric', 59024360.00, '82572139');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (42, 17, 'in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis', 13030688.00, '742759571');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (43, 2, 'maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque', 91072479.00, '780426706');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (44, 14, 'Innovation and Technology Scholarship', 45000.00, 'Demonstrated financial need');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (45, 1, 'odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia', 37310910.00, '868801349');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (46, 18, 'at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rut', 46822039.00, '699404398');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (47, 47, 'turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis al', 60690522.00, '338088508');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (48, 13, 'ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est d', 99935623.00, '672374411');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (49, 36, 'ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer', 66029657.00, '859775927');
-
-INSERT INTO UniGate.Scholarship (ScholarshipID, ApplicantID, Name, Amount, Eligibility) VALUES (50, 30, 'platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis', 70761922.00, '568671559');
-
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (1, 46, '9', 'a positive experience with the admissions team.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (2, 1, '6', 'thank you!');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (3, 2, '9', 'Impressed with the level of professionalism.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (4, 21, '9', 'Looking forward to starting my studies at the university.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (5, 44, '1', 'Appreciate the prompt responses to my inquiries.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (6, 49, '5', 'Found the application process to be straightforward.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (7, 12, '3', 'Would like to see more diversity in the student body.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (8, 16, '5', 'Impressed with the level of professionalism.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (9, 32, '1', 'Would like to see more diversity in the student body.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (10, 6, '6', 'Found the application process to be straightforward.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (11, 28, '1', 'Appreciate the prompt responses to my inquiries.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (12, 1, '3', 'Very informative presentation');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (13, 26, '1', 'Impressed with the level of professionalism.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (14, 39, '1', 'Appreciate the prompt responses to my inquiries.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (15, 6, '3', 'thank you!');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (16, 27, '1', 'Could use more clarity on the program requirements.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (17, 34, '2', 'Found the application process to be straightforward.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (18, 23, '2', 'Appreciate the prompt responses to my inquiries.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (19, 22, '8', 'thank you!');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (20, 48, '3', 'Impressed with the level of professionalism.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (21, 10, '9', 'thank you!');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (22, 50, '2', 'Would like to see more diversity in the student body.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (23, 15, '6', 'a positive experience with the admissions team.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (24, 37, '8', 'Could use more clarity on the program requirements.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (25, 34, '4', 'Thank you for the opportunity to interview for the program.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (26, 44, '7', 'a positive experience with the admissions team.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (27, 31, '5', 'thank you!');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (28, 44, '7', 'Found the application process to be straightforward.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (29, 29, '1', 'thank you!');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (30, 43, '8', 'Found the application process to be straightforward.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (31, 11, '3', 'Thank you for the opportunity to interview for the program.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (32, 23, '1', 'a positive experience with the admissions team.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (33, 29, '1', 'Very informative presentation');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (34, 12, '3', 'Overall');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (35, 31, '8', 'Thank you for the opportunity to interview for the program.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (36, 40, '2', 'Found the application process to be straightforward.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (37, 4, '2', 'Impressed with the level of professionalism.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (38, 50, '6', 'Would like to see more diversity in the student body.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (39, 44, '1', 'Would like to see more diversity in the student body.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (40, 34, '4', 'Found the application process to be straightforward.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (41, 22, '1', 'Could use more clarity on the program requirements.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (42, 11, '6', 'Great communication throughout the process.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (43, 28, '5', 'Thank you for the opportunity to interview for the program.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (44, 47, '6', 'Great communication throughout the process.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (45, 49, '1', 'thank you!');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (46, 8, '8', 'Appreciate the prompt responses to my inquiries.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (47, 17, '1', 'Appreciate the prompt responses to my inquiries.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (48, 1, '7', 'Found the application process to be straightforward.');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (49, 35, '2', 'Overall');
-
-INSERT INTO UniGate.Survey (SurveyID, ApplicantID, SubmissionDate, Feedback)
-VALUES (50, 36, '9', 'thank you!');
